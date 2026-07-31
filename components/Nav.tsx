@@ -43,6 +43,7 @@ export default function Nav() {
       )}
     >
       <div
+        className="nav-inner"
         style={s(
           "max-width:1180px;margin:0 auto;padding:12px 28px;min-height:78px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;"
         )}
@@ -69,6 +70,7 @@ export default function Nav() {
               Ingoma <span style={s("color:#2E7D32;")}>Homes</span>
             </div>
             <div
+              className="nav-kicker"
               style={s(
                 "font-size:9.5px;letter-spacing:.16em;color:#616161;font-weight:600;"
               )}
@@ -79,6 +81,7 @@ export default function Nav() {
         </div>
 
         <div
+          className="nav-links"
           style={s(
             "display:flex;flex-wrap:wrap;align-items:center;gap:4px;flex:1 1 auto;min-width:0;justify-content:center;"
           )}
@@ -127,7 +130,7 @@ export default function Nav() {
             A
           </div>
           <div
-            className="hv-green"
+            className="hv-green nav-cta"
             onClick={v.goHomes}
             style={s(
               "background:#2E7D32;color:#fff;border-radius:999px;padding:11px 22px;font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s ease;"

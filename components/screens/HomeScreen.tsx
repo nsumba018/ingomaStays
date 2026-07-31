@@ -9,8 +9,9 @@ export default function HomeScreen() {
   return (
     <div style={s("animation:fadeIn .3s ease;")}>
       {/* ---- hero + search ------------------------------------------------ */}
-      <div style={s("max-width:1180px;margin:0 auto;padding:28px 48px 0 48px;")}>
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:28px 48px 0 48px;")}>
         <div
+          className="hero-box"
           style={s(
             "position:relative;height:560px;border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(33,33,33,.14);"
           )}
@@ -29,6 +30,7 @@ export default function HomeScreen() {
             )}
           />
           <div
+            className="hero-text"
             style={s(
               "position:absolute;left:64px;top:50%;transform:translateY(-50%);max-width:680px;color:#fff;animation:fadeUp .6s ease;"
             )}
@@ -41,7 +43,7 @@ export default function HomeScreen() {
               OWNED &amp; PROFESSIONALLY MANAGED BY INGOMA HOMES
             </div>
             <div
-              className="serif"
+              className="serif hero-title"
               style={s(
                 "font-size:56px;line-height:1.06;letter-spacing:-0.03em;margin-top:18px;text-wrap:pretty;"
               )}
@@ -49,6 +51,7 @@ export default function HomeScreen() {
               Experience Kigali through two beautiful apartments
             </div>
             <div
+              className="hero-sub"
               style={s(
                 "font-size:17px;line-height:1.65;color:rgba(255,255,255,.9);margin-top:20px;max-width:560px;"
               )}
@@ -56,7 +59,7 @@ export default function HomeScreen() {
               Keza Apartments in Kicukiro and Liza Apartments in Nyarugenge —
               both owned and professionally managed by our hospitality company.
             </div>
-            <div style={s("display:flex;gap:26px;margin-top:28px;")}>
+            <div className="hero-stats" style={s("display:flex;gap:26px;margin-top:28px;")}>
               {v.heroStats.map((stat) => (
                 <div key={stat.label}>
                   <div className="serif" style={s("font-size:26px;")}>
@@ -76,6 +79,7 @@ export default function HomeScreen() {
         </div>
 
         <div
+          className="sec-tight search-card"
           style={s(
             "margin:-44px 64px 0 64px;position:relative;background:#fff;border:1px solid #E8E8E8;border-radius:20px;box-shadow:0 16px 44px rgba(33,33,33,.14);padding:14px 14px 14px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr auto;align-items:center;"
           )}
@@ -152,7 +156,7 @@ export default function HomeScreen() {
             </div>
           </div>
           <div
-            className="hv-green"
+            className="hv-green search-cta"
             onClick={v.goHomes}
             style={s(
               "background:#2E7D32;color:#fff;border-radius:14px;padding:16px 32px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:9px;transition:background .2s ease;"
@@ -175,6 +179,7 @@ export default function HomeScreen() {
         </div>
 
         <div
+          className="sec-tight"
           style={s(
             "margin:20px 64px 0 64px;display:flex;align-items:center;gap:26px;flex-wrap:wrap;"
           )}
@@ -194,12 +199,13 @@ export default function HomeScreen() {
       </div>
 
       {/* ---- our apartments ------------------------------------------------ */}
-      <div style={s("max-width:1180px;margin:0 auto;padding:56px 48px 0 48px;")}>
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:56px 48px 0 48px;")}>
         <div
+          className="head-stack"
           style={s("display:flex;align-items:baseline;justify-content:space-between;")}
         >
           <div>
-            <div className="serif" style={s("font-size:28px;letter-spacing:-0.02em;")}>
+            <div className="serif title-md" style={s("font-size:28px;letter-spacing:-0.02em;")}>
               Our apartments
             </div>
             <div style={s("font-size:15px;color:#616161;margin-top:6px;")}>
@@ -217,6 +223,7 @@ export default function HomeScreen() {
         </div>
 
         <div
+          className="grid-2"
           style={s(
             "display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:28px;"
           )}
@@ -323,14 +330,15 @@ export default function HomeScreen() {
       </div>
 
       {/* ---- explore kigali ------------------------------------------------ */}
-      <div style={s("max-width:1180px;margin:0 auto;padding:64px 48px 0 48px;")}>
-        <div className="serif" style={s("font-size:28px;letter-spacing:-0.02em;")}>
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:64px 48px 0 48px;")}>
+        <div className="serif title-md" style={s("font-size:28px;letter-spacing:-0.02em;")}>
           Explore Kigali
         </div>
         <div style={s("font-size:15px;color:#616161;margin-top:6px;")}>
           Two districts, one standard of service.
         </div>
         <div
+          className="grid-2"
           style={s(
             "display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:26px;"
           )}
@@ -379,6 +387,7 @@ export default function HomeScreen() {
       {/* ---- keza & liza feature ------------------------------------------- */}
       <div style={s("margin-top:80px;background:#15211A;color:#fff;")}>
         <div
+          className="sec split-2"
           style={s(
             "max-width:1180px;margin:0 auto;padding:80px 48px;display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:center;"
           )}
@@ -417,7 +426,7 @@ export default function HomeScreen() {
               View both apartments →
             </div>
           </div>
-          <div style={s("display:grid;grid-template-columns:1fr 1fr;gap:18px;")}>
+          <div className="grid-2-tight" style={s("display:grid;grid-template-columns:1fr 1fr;gap:18px;")}>
             {v.luxury.map((p) => (
               <div key={p.id} onClick={p.open} style={s("cursor:pointer;")}>
                 <div
@@ -452,11 +461,12 @@ export default function HomeScreen() {
       </div>
 
       {/* ---- moods --------------------------------------------------------- */}
-      <div style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
-        <div className="serif" style={s("font-size:28px;letter-spacing:-0.02em;")}>
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
+        <div className="serif title-md" style={s("font-size:28px;letter-spacing:-0.02em;")}>
           Find a home for your trip
         </div>
         <div
+          className="grid-4"
           style={s(
             "display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:26px;"
           )}
@@ -504,13 +514,14 @@ export default function HomeScreen() {
       </div>
 
       {/* ---- why stay with us ---------------------------------------------- */}
-      <div style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
         <div
+          className="split-2"
           style={s(
             "display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center;"
           )}
         >
-          <div style={s("display:grid;grid-template-columns:1fr 1fr;gap:16px;")}>
+          <div className="grid-2-tight" style={s("display:grid;grid-template-columns:1fr 1fr;gap:16px;")}>
             {v.standardsImgs.map((i) => (
               <div
                 key={i.src}
@@ -528,7 +539,7 @@ export default function HomeScreen() {
             ))}
           </div>
           <div>
-            <div className="serif" style={s("font-size:28px;letter-spacing:-0.02em;")}>
+            <div className="serif title-md" style={s("font-size:28px;letter-spacing:-0.02em;")}>
               Why stay with us
             </div>
             <div
@@ -540,6 +551,7 @@ export default function HomeScreen() {
               arrival.
             </div>
             <div
+              className="grid-2-tight"
               style={s(
                 "display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:26px;"
               )}
@@ -571,8 +583,8 @@ export default function HomeScreen() {
       </div>
 
       {/* ---- map ----------------------------------------------------------- */}
-      <div style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
-        <div className="serif" style={s("font-size:28px;letter-spacing:-0.02em;")}>
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
+        <div className="serif title-md" style={s("font-size:28px;letter-spacing:-0.02em;")}>
           Where you&apos;ll find us
         </div>
         <div style={s("font-size:15px;color:#616161;margin-top:6px;")}>
@@ -580,6 +592,7 @@ export default function HomeScreen() {
           addresses.
         </div>
         <div
+          className="split-2"
           style={s(
             "display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:26px;align-items:start;"
           )}
@@ -705,14 +718,15 @@ export default function HomeScreen() {
       </div>
 
       {/* ---- testimonials --------------------------------------------------- */}
-      <div style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
-        <div className="serif" style={s("font-size:28px;letter-spacing:-0.02em;")}>
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
+        <div className="serif title-md" style={s("font-size:28px;letter-spacing:-0.02em;")}>
           Guest reviews
         </div>
         <div style={s("font-size:15px;color:#616161;margin-top:6px;")}>
           4.93 average across {v.totalReviews} verified stays.
         </div>
         <div
+          className="grid-3"
           style={s(
             "display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px;"
           )}
@@ -756,14 +770,15 @@ export default function HomeScreen() {
       </div>
 
       {/* ---- faqs ----------------------------------------------------------- */}
-      <div style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
         <div
+          className="split-2"
           style={s(
             "display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start;"
           )}
         >
           <div>
-            <div className="serif" style={s("font-size:28px;letter-spacing:-0.02em;")}>
+            <div className="serif title-md" style={s("font-size:28px;letter-spacing:-0.02em;")}>
               Frequently asked questions
             </div>
             <div
@@ -814,8 +829,9 @@ export default function HomeScreen() {
       </div>
 
       {/* ---- newsletter ----------------------------------------------------- */}
-      <div style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:80px 48px 0 48px;")}>
         <div
+          className="newsletter"
           style={s(
             "position:relative;border-radius:24px;overflow:hidden;padding:64px;display:flex;align-items:center;justify-content:space-between;gap:48px;"
           )}
@@ -850,6 +866,7 @@ export default function HomeScreen() {
             </div>
           </div>
           <div
+            className="newsletter-form"
             style={s(
               "position:relative;display:flex;gap:10px;background:rgba(255,255,255,.96);border-radius:16px;padding:8px;min-width:420px;"
             )}

@@ -12,7 +12,7 @@ export default function GalleryLightbox() {
         "position:fixed;inset:0;z-index:70;background:rgba(14,20,15,.96);overflow-y:auto;animation:fadeIn .2s ease;"
       )}
     >
-      <div
+      <div className="lightbox-bar"
         style={s(
           "position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:rgba(14,20,15,.9);backdrop-filter:blur(8px);"
         )}
@@ -30,7 +30,7 @@ export default function GalleryLightbox() {
         </div>
       </div>
 
-      <div
+      <div className="lightbox-grid"
         style={s(
           "max-width:1180px;margin:0 auto;padding:20px 40px 60px 40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;"
         )}

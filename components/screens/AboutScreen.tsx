@@ -8,8 +8,8 @@ export default function AboutScreen() {
 
   return (
     <div style={s("animation:fadeIn .3s ease;")}>
-      <div style={s("max-width:1180px;margin:0 auto;padding:32px 48px 0 48px;")}>
-        <div
+      <div className="sec" style={s("max-width:1180px;margin:0 auto;padding:32px 48px 0 48px;")}>
+        <div className="hero-box"
           style={s(
             "position:relative;height:420px;border-radius:24px;overflow:hidden;"
           )}
@@ -27,7 +27,7 @@ export default function AboutScreen() {
               "position:absolute;inset:0;background:linear-gradient(120deg,rgba(16,26,18,.72) 20%,rgba(16,26,18,.25) 100%);"
             )}
           />
-          <div
+          <div className="hero-text"
             style={s(
               "position:absolute;left:60px;top:50%;transform:translateY(-50%);color:#fff;max-width:600px;"
             )}
@@ -40,7 +40,7 @@ export default function AboutScreen() {
               ABOUT INGOMA HOMES
             </div>
             <div
-              className="serif"
+              className="serif hero-title"
               style={s(
                 "font-size:44px;line-height:1.1;letter-spacing:-0.03em;margin-top:16px;"
               )}
@@ -51,7 +51,7 @@ export default function AboutScreen() {
         </div>
       </div>
 
-      <div
+      <div className="sec split-2"
         style={s(
           "max-width:1180px;margin:0 auto;padding:60px 48px 0 48px;display:grid;grid-template-columns:1fr 1fr;gap:72px;"
         )}
@@ -83,7 +83,7 @@ export default function AboutScreen() {
             both doors.
           </div>
         </div>
-        <div style={s("display:grid;grid-template-columns:1fr 1fr;gap:16px;")}>
+        <div className="grid-2-tight" style={s("display:grid;grid-template-columns:1fr 1fr;gap:16px;")}>
           {v.aboutImgs.map((i) => (
             <div
               key={i.src}
@@ -101,7 +101,7 @@ export default function AboutScreen() {
       </div>
 
       <div style={s("max-width:1180px;margin:0 auto;padding:64px 48px 0 48px;")}>
-        <div style={s("display:grid;grid-template-columns:repeat(3,1fr);gap:24px;")}>
+        <div className="grid-3" style={s("display:grid;grid-template-columns:repeat(3,1fr);gap:24px;")}>
           {v.pillars.map((p) => (
             <div
               key={p.kicker}
@@ -135,7 +135,7 @@ export default function AboutScreen() {
         <div className="serif" style={s("font-size:26px;letter-spacing:-0.02em;")}>
           Our hospitality standards
         </div>
-        <div
+        <div className="grid-4"
           style={s(
             "display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:24px;"
           )}

@@ -9,11 +9,12 @@ export default function Footer() {
   return (
     <div style={s("margin-top:80px;border-top:1px solid #E8E8E8;background:#fff;")}>
       <div
+        className="sec footer-grid"
         style={s(
           "max-width:1180px;margin:0 auto;padding:56px 48px 32px 48px;display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:40px;"
         )}
       >
-        <div>
+        <div className="footer-brand">
           <div style={s("display:flex;align-items:center;gap:11px;")}>
             <div
               className="serif"
@@ -74,11 +75,13 @@ export default function Footer() {
       </div>
 
       <div
+        className="sec"
         style={s(
           "max-width:1180px;margin:0 auto;padding:0 48px 40px 48px;border-top:1px solid #F0F0EE;"
         )}
       >
         <div
+          className="footer-legal"
           style={s(
             "padding-top:22px;display:flex;justify-content:space-between;font-size:12.5px;color:#616161;"
           )}

@@ -7,12 +7,12 @@ export default function SavedScreen() {
   const v = useIngoma();
 
   return (
-    <div
+    <div className="sec"
       style={s(
         "max-width:1180px;margin:0 auto;padding:44px 48px 90px 48px;animation:fadeIn .3s ease;"
       )}
     >
-      <div className="serif" style={s("font-size:36px;letter-spacing:-0.025em;")}>
+      <div className="serif title-lg" style={s("font-size:36px;letter-spacing:-0.025em;")}>
         Saved homes
       </div>
       <div style={s("font-size:15px;color:#616161;margin-top:8px;")}>
@@ -47,7 +47,7 @@ export default function SavedScreen() {
         </div>
       )}
 
-      <div
+      <div className="grid-4"
         style={s(
           "display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:30px;"
         )}

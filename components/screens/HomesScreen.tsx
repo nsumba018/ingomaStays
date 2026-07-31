@@ -14,7 +14,7 @@ export default function HomesScreen() {
           "position:sticky;top:var(--hdr,78px);z-index:20;background:rgba(250,250,248,.94);backdrop-filter:blur(12px);border-bottom:1px solid #E8E8E8;"
         )}
       >
-        <div
+        <div className="sec"
           style={s(
             "max-width:1180px;margin:0 auto;padding:16px 48px;display:flex;gap:10px;overflow-x:auto;"
           )}
@@ -27,9 +27,9 @@ export default function HomesScreen() {
         </div>
       </div>
 
-      <div style={s("display:grid;grid-template-columns:1fr 40%;align-items:start;")}>
-        <div style={s("padding:28px 40px 70px 48px;")}>
-          <div
+      <div className="homes-split" style={s("display:grid;grid-template-columns:1fr 40%;align-items:start;")}>
+        <div className="homes-results" style={s("padding:28px 40px 70px 48px;")}>
+          <div className="head-stack"
             style={s(
               "display:flex;align-items:flex-end;justify-content:space-between;gap:20px;"
             )}
@@ -42,8 +42,8 @@ export default function HomesScreen() {
                 {v.filterSummary}
               </div>
             </div>
-            <div style={s("display:flex;gap:10px;align-items:center;")}>
-              <input
+            <div className="homes-toolbar" style={s("display:flex;gap:10px;align-items:center;")}>
+              <input className="homes-search"
                 value={v.query}
                 onChange={v.setQuery}
                 placeholder="Search homes…"
@@ -75,7 +75,7 @@ export default function HomesScreen() {
             </div>
           </div>
 
-          <div
+          <div className="grid-2"
             style={s(
               "display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px;"
             )}
@@ -174,12 +174,12 @@ export default function HomesScreen() {
         </div>
 
         {/* Map column stays pinned beside the results as they scroll. */}
-        <div
+        <div className="homes-map"
           style={s(
             "position:sticky;top:calc(var(--hdr,78px) + 65px);height:calc(100vh - var(--hdr,78px) - 65px);"
           )}
         >
-          <div
+          <div className="homes-map-inner"
             style={s(
               "position:relative;width:100%;height:100%;border-left:1px solid #E8E8E8;background:#EDF1EA;"
             )}

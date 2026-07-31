@@ -7,12 +7,12 @@ export default function DashboardScreen() {
   const v = useIngoma();
 
   return (
-    <div
+    <div className="sec dash-split"
       style={s(
         "max-width:1180px;margin:0 auto;padding:44px 48px 90px 48px;animation:fadeIn .3s ease;display:grid;grid-template-columns:230px 1fr;gap:48px;align-items:start;"
       )}
     >
-      <div
+      <div className="dash-nav"
         style={s(
           "position:sticky;top:calc(var(--hdr,78px) + 32px);display:flex;flex-direction:column;gap:2px;"
         )}
@@ -25,14 +25,14 @@ export default function DashboardScreen() {
       </div>
 
       <div>
-        <div className="serif" style={s("font-size:36px;letter-spacing:-0.025em;")}>
+        <div className="serif title-lg" style={s("font-size:36px;letter-spacing:-0.025em;")}>
           {v.dashTitle}
         </div>
 
         {v.dashIsBookings && (
           <>
             {v.hasTrip && (
-              <div
+              <div className="trip-card"
                 style={s(
                   "margin-top:26px;background:#fff;border:1px solid #E8E8E8;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:340px 1fr;"
                 )}
@@ -133,7 +133,7 @@ export default function DashboardScreen() {
             <div className="serif" style={s("margin-top:40px;font-size:22px;")}>
               Past stays
             </div>
-            <div
+            <div className="grid-3"
               style={s(
                 "display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:18px;"
               )}
@@ -190,7 +190,7 @@ export default function DashboardScreen() {
               "margin-top:26px;background:#fff;border:1px solid #E8E8E8;border-radius:20px;overflow:hidden;"
             )}
           >
-            <div
+            <div className="pay-head"
               style={s(
                 "display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr auto;padding:16px 24px;background:#F5F6F2;font-size:12px;font-weight:600;color:#616161;letter-spacing:.04em;"
               )}
@@ -202,7 +202,7 @@ export default function DashboardScreen() {
               <div>RECEIPT</div>
             </div>
             {v.payments.map((r, i) => (
-              <div
+              <div className="pay-row"
                 key={i}
                 style={s(
                   "display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr auto;padding:18px 24px;border-top:1px solid #F0F0EE;font-size:14px;align-items:center;"

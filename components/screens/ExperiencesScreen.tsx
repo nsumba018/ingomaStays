@@ -7,12 +7,12 @@ export default function ExperiencesScreen() {
   const v = useIngoma();
 
   return (
-    <div
+    <div className="sec"
       style={s(
         "max-width:1180px;margin:0 auto;padding:48px 48px 90px 48px;animation:fadeIn .3s ease;"
       )}
     >
-      <div className="serif" style={s("font-size:40px;letter-spacing:-0.03em;")}>
+      <div className="serif title-lg" style={s("font-size:40px;letter-spacing:-0.03em;")}>
         Experiences we arrange
       </div>
       <div
@@ -24,7 +24,7 @@ export default function ExperiencesScreen() {
         arrive. Everything is booked and vetted by our team.
       </div>
 
-      <div
+      <div className="grid-3"
         style={s(
           "display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px;"
         )}

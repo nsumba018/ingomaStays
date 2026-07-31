@@ -29,6 +29,7 @@ function Shell() {
 
   return (
     <div
+      className="app-root"
       style={s(
         "min-height:100vh;min-width:1280px;background:#FAFAF8;color:#212121;position:relative;"
       )}

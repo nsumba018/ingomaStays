@@ -7,7 +7,7 @@ export default function DetailScreen() {
   const v = useIngoma();
 
   return (
-    <div
+    <div className="sec"
       style={s(
         "max-width:1180px;margin:0 auto;padding:32px 48px 90px 48px;animation:fadeIn .3s ease;"
       )}
@@ -22,7 +22,7 @@ export default function DetailScreen() {
         ‹ Back to our homes
       </div>
 
-      <div
+      <div className="detail-head"
         style={s(
           "display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:16px;"
         )}
@@ -36,7 +36,7 @@ export default function DetailScreen() {
             {v.sel.collection}, KIGALI · MANAGED BY INGOMA HOMES
           </div>
           <div
-            className="serif"
+            className="serif detail-title"
             style={s(
               "font-size:38px;letter-spacing:-0.03em;line-height:1.12;margin-top:10px;"
             )}
@@ -79,7 +79,7 @@ export default function DetailScreen() {
 
       {/* ---- gallery mosaic ------------------------------------------------ */}
       <div style={s("position:relative;margin-top:22px;")}>
-        <div
+        <div className="detail-gallery"
           style={s(
             "display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:10px;border-radius:22px;overflow:hidden;"
           )}
@@ -105,7 +105,7 @@ export default function DetailScreen() {
         </div>
       </div>
 
-      <div
+      <div className="detail-split"
         style={s(
           "display:grid;grid-template-columns:1fr 400px;gap:72px;margin-top:44px;align-items:start;"
         )}
@@ -161,7 +161,7 @@ export default function DetailScreen() {
                     {g.priceLabel}
                   </div>
                 </div>
-                <div
+                <div className="unit-grid"
                   style={s(
                     "display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px;"
                   )}
@@ -213,7 +213,7 @@ export default function DetailScreen() {
             <div className="serif" style={s("font-size:20px;font-weight:600;")}>
               Why you’ll love staying here
             </div>
-            <div
+            <div className="grid-2-tight"
               style={s(
                 "display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;"
               )}
@@ -242,7 +242,7 @@ export default function DetailScreen() {
             <div className="serif" style={s("font-size:20px;font-weight:600;")}>
               Amenities
             </div>
-            <div
+            <div className="grid-2-tight"
               style={s(
                 "display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;"
               )}
@@ -264,7 +264,7 @@ export default function DetailScreen() {
             <div className="serif" style={s("font-size:20px;font-weight:600;")}>
               Unit types
             </div>
-            <div
+            <div className="grid-3"
               style={s(
                 "display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;"
               )}
@@ -298,7 +298,7 @@ export default function DetailScreen() {
           </div>
 
           <div style={s("padding:26px 0;border-bottom:1px solid #E8E8E8;")}>
-            <div style={s("display:grid;grid-template-columns:1fr 1fr;gap:44px;")}>
+            <div className="grid-2-tight" style={s("display:grid;grid-template-columns:1fr 1fr;gap:44px;")}>
               <div>
                 <div className="serif" style={s("font-size:20px;font-weight:600;")}>
                   House rules
@@ -350,7 +350,7 @@ export default function DetailScreen() {
             <div className="serif" style={s("font-size:20px;font-weight:600;")}>
               ★ {v.sel.rating} · {v.sel.reviews} guest reviews
             </div>
-            <div
+            <div className="grid-2-tight"
               style={s(
                 "display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;"
               )}
@@ -424,7 +424,7 @@ export default function DetailScreen() {
         </div>
 
         {/* ---- booking card ------------------------------------------------ */}
-        <div style={s("position:sticky;top:calc(var(--hdr,78px) + 32px);")}>
+        <div className="detail-aside" style={s("position:sticky;top:calc(var(--hdr,78px) + 32px);")}>
           <div
             style={s(
               "background:#fff;border:1px solid #E8E8E8;border-radius:22px;padding:26px;box-shadow:0 16px 40px rgba(33,33,33,.10);"

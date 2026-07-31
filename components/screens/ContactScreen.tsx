@@ -7,13 +7,13 @@ export default function ContactScreen() {
   const v = useIngoma();
 
   return (
-    <div
+    <div className="sec split-2"
       style={s(
         "max-width:1180px;margin:0 auto;padding:48px 48px 90px 48px;animation:fadeIn .3s ease;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;"
       )}
     >
       <div>
-        <div className="serif" style={s("font-size:40px;letter-spacing:-0.03em;")}>
+        <div className="serif title-lg" style={s("font-size:40px;letter-spacing:-0.03em;")}>
           Talk to our guest team
         </div>
         <div
@@ -70,7 +70,7 @@ export default function ContactScreen() {
         </div>
       </div>
 
-      <div
+      <div className="contact-card"
         style={s(
           "background:#fff;border:1px solid #E8E8E8;border-radius:24px;padding:36px;"
         )}
@@ -79,7 +79,7 @@ export default function ContactScreen() {
           Send us a message
         </div>
 
-        <div
+        <div className="grid-2-tight"
           style={s(
             "display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;"
           )}

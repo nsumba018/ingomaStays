@@ -8,7 +8,7 @@ export default function BookingModal() {
   const v = useIngoma();
 
   return (
-    <div
+    <div className="modal-wrap"
       style={s(
         "position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:40px;"
       )}
@@ -19,14 +19,14 @@ export default function BookingModal() {
           "position:absolute;inset:0;background:rgba(18,24,18,.55);animation:fadeIn .2s ease;"
         )}
       />
-      <div
+      <div className="modal-card"
         style={s(
           "position:relative;background:#FAFAF8;border-radius:24px;width:100%;max-width:960px;max-height:88vh;overflow-y:auto;box-shadow:0 30px 80px rgba(0,0,0,.32);animation:modalIn .3s ease;"
         )}
       >
         {v.bookingInProgress && (
-          <div style={s("display:grid;grid-template-columns:1fr 340px;")}>
-            <div style={s("padding:34px 36px 40px 36px;")}>
+          <div className="modal-grid" style={s("display:grid;grid-template-columns:1fr 340px;")}>
+            <div className="modal-body" style={s("padding:34px 36px 40px 36px;")}>
               <div
                 style={s(
                   "display:flex;align-items:center;justify-content:space-between;"
@@ -83,7 +83,7 @@ export default function BookingModal() {
                           {g.priceLabel}
                         </div>
                       </div>
-                      <div
+                      <div className="modal-units"
                         style={s(
                           "display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;"
                         )}
@@ -285,7 +285,7 @@ export default function BookingModal() {
                       </div>
                     ))}
                   </div>
-                  <div
+                  <div className="grid-2-tight"
                     style={s(
                       "display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;"
                     )}
@@ -352,7 +352,7 @@ export default function BookingModal() {
                 </>
               )}
 
-              <div
+              <div className="modal-actions"
                 style={s("display:flex;align-items:center;gap:14px;margin-top:28px;")}
               >
                 {v.canGoBack && (
@@ -379,7 +379,7 @@ export default function BookingModal() {
             </div>
 
             {/* ---- running order summary ------------------------------------ */}
-            <div
+            <div className="modal-summary"
               style={s(
                 "border-left:1px solid #E8E8E8;padding:34px 30px;background:#fff;border-radius:0 24px 24px 0;"
               )}
@@ -494,7 +494,7 @@ export default function BookingModal() {
 
         {/* ---- confirmation ------------------------------------------------ */}
         {v.stepConfirmed && (
-          <div style={s("padding:56px 64px 60px 64px;animation:fadeUp .4s ease;")}>
+          <div className="modal-confirm" style={s("padding:56px 64px 60px 64px;animation:fadeUp .4s ease;")}>
             <div style={s("text-align:center;")}>
               <div
                 style={s(
@@ -532,7 +532,7 @@ export default function BookingModal() {
               >
                 ARRIVAL INSTRUCTIONS
               </div>
-              <div
+              <div className="grid-2-tight"
                 style={s(
                   "display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px;"
                 )}

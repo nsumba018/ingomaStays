@@ -1,8 +1,12 @@
+@import "./responsive.css";
+
 html,
 body {
   margin: 0;
   padding: 0;
   background: #fafaf8;
+  /* The design is a wide fixed layout; never let it scroll sideways. */
+  overflow-x: hidden;
 }
 
 *,
