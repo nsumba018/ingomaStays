@@ -112,7 +112,7 @@ export default function HomesScreen() {
                   </div>
                   <div
                     style={s(
-                      "position:absolute;bottom:12px;left:12px;background:rgba(255,255,255,.95);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:600;color:#2E7D32;"
+                      "position:absolute;bottom:12px;left:12px;background:rgba(255,255,255,.95);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:600;color:#8A6A14;"
                     )}
                   >
                     Instant confirmation
@@ -143,7 +143,7 @@ export default function HomesScreen() {
                   </div>
                   <div
                     style={s(
-                      "font-size:13px;font-weight:600;color:#2E7D32;margin-top:6px;"
+                      "font-size:13px;font-weight:600;color:#8A6A14;margin-top:6px;"
                     )}
                   >
                     {p.tierLabel}
@@ -158,10 +158,10 @@ export default function HomesScreen() {
                       <span style={s("color:#616161;font-size:13px;")}>/ night</span>
                     </div>
                     <div
-                      className="hv-green"
+                      className="hv-primary"
                       onClick={p.book}
                       style={s(
-                        "background:#2E7D32;color:#fff;border-radius:12px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;"
+                        "background:#8A6A14;color:#fff;border-radius:12px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;"
                       )}
                     >
                       Book now
@@ -181,7 +181,7 @@ export default function HomesScreen() {
         >
           <div className="homes-map-inner"
             style={s(
-              "position:relative;width:100%;height:100%;border-left:1px solid #E8E8E8;background:#EDF1EA;"
+              "position:relative;width:100%;height:100%;border-left:1px solid #E8E8E8;background:#F5F0E2;"
             )}
           >
             <iframe

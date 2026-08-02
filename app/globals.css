@@ -26,11 +26,11 @@ body {
 }
 
 a {
-  color: #2e7d32;
+  color: #8A6A14;
   text-decoration: none;
 }
 a:hover {
-  color: #1b5e20;
+  color: #634C0D;
 }
 
 input,
@@ -93,10 +93,10 @@ textarea::placeholder {
  * attributes; CSS classes are the equivalent that survives a React port.
  */
 .hv-soft:hover {
-  background: #f1f3ee;
+  background: #F6F2E8;
 }
-.hv-green:hover {
-  background: #1b5e20 !important;
+.hv-primary:hover {
+  background: #634C0D !important;
 }
 .hv-gold:hover {
   background: rgba(217, 178, 74, 0.12);

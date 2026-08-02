@@ -39,7 +39,7 @@ export default function SavedScreen() {
           <div
             onClick={v.goHomes}
             style={s(
-              "display:inline-block;margin-top:22px;background:#2E7D32;color:#fff;border-radius:999px;padding:13px 28px;font-size:14.5px;font-weight:600;cursor:pointer;"
+              "display:inline-block;margin-top:22px;background:#8A6A14;color:#fff;border-radius:999px;padding:13px 28px;font-size:14.5px;font-weight:600;cursor:pointer;"
             )}
           >
             Browse our homes
@@ -93,10 +93,10 @@ export default function SavedScreen() {
                   {p.priceLabel}
                 </div>
                 <div
-                  className="hv-green"
+                  className="hv-primary"
                   onClick={p.book}
                   style={s(
-                    "background:#2E7D32;color:#fff;border-radius:10px;padding:8px 16px;font-size:12.5px;font-weight:600;cursor:pointer;"
+                    "background:#8A6A14;color:#fff;border-radius:10px;padding:8px 16px;font-size:12.5px;font-weight:600;cursor:pointer;"
                   )}
                 >
                   Book

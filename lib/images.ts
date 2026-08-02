@@ -162,9 +162,9 @@ export function ph(label: string, w: number, h: number): string {
   const svg =
     `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">` +
     `<defs><pattern id="s" width="18" height="18" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">` +
-    `<rect width="18" height="18" fill="#EDF1EA"/><rect width="9" height="18" fill="#E2E9DF"/>` +
+    `<rect width="18" height="18" fill="#F5F0E2"/><rect width="9" height="18" fill="#EDE5CE"/>` +
     `</pattern></defs><rect width="100%" height="100%" fill="url(#s)"/>` +
-    `<text x="50%" y="50%" font-family="monospace" font-size="${fontSize}" fill="#7C8F7E" text-anchor="middle">${label}</text>` +
+    `<text x="50%" y="50%" font-family="monospace" font-size="${fontSize}" fill="#9C8A57" text-anchor="middle">${label}</text>` +
     `</svg>`;
   return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
 }

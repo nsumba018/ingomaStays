@@ -77,7 +77,7 @@ export default function BookingModal() {
                         </div>
                         <div
                           style={s(
-                            "font-size:13px;font-weight:700;color:#2E7D32;"
+                            "font-size:13px;font-weight:700;color:#8A6A14;"
                           )}
                         >
                           {g.priceLabel}
@@ -367,10 +367,10 @@ export default function BookingModal() {
                   </div>
                 )}
                 <div
-                  className="hv-green"
+                  className="hv-primary"
                   onClick={v.nextStep}
                   style={s(
-                    "background:#2E7D32;color:#fff;border-radius:14px;padding:14px 30px;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s ease;"
+                    "background:#8A6A14;color:#fff;border-radius:14px;padding:14px 30px;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s ease;"
                   )}
                 >
                   {v.nextLabel}
@@ -498,7 +498,7 @@ export default function BookingModal() {
             <div style={s("text-align:center;")}>
               <div
                 style={s(
-                  "width:74px;height:74px;border-radius:999px;background:#EAF2EA;color:#2E7D32;font-size:32px;display:flex;align-items:center;justify-content:center;margin:0 auto;animation:pop .5s ease;"
+                  "width:74px;height:74px;border-radius:999px;background:#F7EFD5;color:#8A6A14;font-size:32px;display:flex;align-items:center;justify-content:center;margin:0 auto;animation:pop .5s ease;"
                 )}
               >
                 ✓
@@ -527,7 +527,7 @@ export default function BookingModal() {
             >
               <div
                 style={s(
-                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#2E7D32;"
+                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#8A6A14;"
                 )}
               >
                 ARRIVAL INSTRUCTIONS
@@ -558,10 +558,10 @@ export default function BookingModal() {
               )}
             >
               <div
-                className="hv-green"
+                className="hv-primary"
                 onClick={v.viewBooking}
                 style={s(
-                  "background:#2E7D32;color:#fff;border-radius:14px;padding:14px 30px;font-size:15px;font-weight:600;cursor:pointer;"
+                  "background:#8A6A14;color:#fff;border-radius:14px;padding:14px 30px;font-size:15px;font-weight:600;cursor:pointer;"
                 )}
               >
                 View my booking

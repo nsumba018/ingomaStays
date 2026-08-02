@@ -57,7 +57,7 @@ export default function Nav() {
           <div
             className="serif"
             style={s(
-              "width:34px;height:34px;border-radius:10px;background:#2E7D32;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;"
+              "width:34px;height:34px;border-radius:10px;background:#8A6A14;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;"
             )}
           >
             I
@@ -67,7 +67,7 @@ export default function Nav() {
               className="serif"
               style={s("font-size:19px;letter-spacing:-0.02em;line-height:1.1;")}
             >
-              Ingoma <span style={s("color:#2E7D32;")}>Homes</span>
+              Ingoma <span style={s("color:#8A6A14;")}>Homes</span>
             </div>
             <div
               className="nav-kicker"
@@ -124,16 +124,16 @@ export default function Nav() {
           <div
             onClick={v.goDashboard}
             style={s(
-              "width:34px;height:34px;border-radius:999px;background:#EAF2EA;color:#2E7D32;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;cursor:pointer;border:1px solid #DCE8DC;"
+              "width:34px;height:34px;border-radius:999px;background:#F7EFD5;color:#8A6A14;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;cursor:pointer;border:1px solid #F0E6C9;"
             )}
           >
             A
           </div>
           <div
-            className="hv-green nav-cta"
+            className="hv-primary nav-cta"
             onClick={v.goHomes}
             style={s(
-              "background:#2E7D32;color:#fff;border-radius:999px;padding:11px 22px;font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s ease;"
+              "background:#8A6A14;color:#fff;border-radius:999px;padding:11px 22px;font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s ease;"
             )}
           >
             Book now

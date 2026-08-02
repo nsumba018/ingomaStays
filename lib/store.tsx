@@ -203,7 +203,7 @@ function derive(
       borderRadius: "20px",
       overflow: "hidden",
       transition: "transform .22s ease,box-shadow .22s ease",
-      border: s.hoverId === p.id ? "1px solid #2E7D32" : "1px solid #E8E8E8",
+      border: s.hoverId === p.id ? "1px solid #8A6A14" : "1px solid #E8E8E8",
       transform: s.hoverId === p.id ? "translateY(-4px)" : "none",
       boxShadow:
         s.hoverId === p.id ? "0 20px 40px rgba(33,33,33,.14)" : "none",
@@ -240,9 +240,9 @@ function derive(
       cursor: "pointer",
       whiteSpace: "nowrap",
       transition: "all .18s ease",
-      background: s.cat === label ? "#2E7D32" : "#fff",
+      background: s.cat === label ? "#8A6A14" : "#fff",
       color: s.cat === label ? "#fff" : "#424242",
-      border: s.cat === label ? "1px solid #2E7D32" : "1px solid #E8E8E8",
+      border: s.cat === label ? "1px solid #8A6A14" : "1px solid #E8E8E8",
     } as CSSProperties,
   }));
 
@@ -271,13 +271,13 @@ function derive(
           }));
       },
       style: {
-        background: u.occupied ? "#F4F4F1" : "#fff",
-        border: isSel ? "2px solid #2E7D32" : "1px solid #E8E8E8",
+        background: u.occupied ? "#F7F4EA" : "#fff",
+        border: isSel ? "2px solid #8A6A14" : "1px solid #E8E8E8",
         borderRadius: "14px",
         padding: "14px",
         cursor: u.occupied ? "not-allowed" : "pointer",
         opacity: u.occupied ? 0.62 : 1,
-        boxShadow: isSel ? "0 0 0 3px rgba(46,125,50,.12)" : "none",
+        boxShadow: isSel ? "0 0 0 3px rgba(138,106,20,.12)" : "none",
         transition: "all .15s ease",
       } as CSSProperties,
       badgeStyle: {
@@ -286,8 +286,8 @@ function derive(
         borderRadius: "999px",
         padding: "3px 8px",
         whiteSpace: "nowrap",
-        background: u.occupied ? "#ECECEA" : "#EAF2EA",
-        color: u.occupied ? "#9E9E9E" : "#2E7D32",
+        background: u.occupied ? "#ECECEA" : "#F7EFD5",
+        color: u.occupied ? "#9E9E9E" : "#8A6A14",
       } as CSSProperties,
     };
   });
@@ -338,12 +338,12 @@ function derive(
     const active = i >= s.ci && i <= s.co;
     const edge = i === s.ci || i === s.co;
     const skin = {
-      background: edge ? "#2E7D32" : active ? "#EAF2EA" : "#fff",
-      color: edge ? "#fff" : active ? "#2E7D32" : "#424242",
+      background: edge ? "#8A6A14" : active ? "#F7EFD5" : "#fff",
+      color: edge ? "#fff" : active ? "#8A6A14" : "#424242",
       border: edge
-        ? "1px solid #2E7D32"
+        ? "1px solid #8A6A14"
         : active
-          ? "1px solid #CDE0CD"
+          ? "1px solid #E8D9A8"
           : "1px solid #E8E8E8",
     };
     return {
@@ -374,7 +374,7 @@ function derive(
       height: "4px",
       flex: 1,
       borderRadius: "999px",
-      background: i <= s.step ? "#2E7D32" : "#E4E4E0",
+      background: i <= s.step ? "#8A6A14" : "#E4E4E0",
       transition: "background .25s ease",
     } as CSSProperties,
   }));
@@ -464,8 +464,8 @@ function derive(
         cursor: "pointer",
         whiteSpace: "nowrap",
         flex: "0 0 auto",
-        color: s.screen === key ? "#2E7D32" : "#424242",
-        background: s.screen === key ? "#EAF2EA" : "transparent",
+        color: s.screen === key ? "#8A6A14" : "#424242",
+        background: s.screen === key ? "#F7EFD5" : "transparent",
         transition: "all .18s ease",
       } as CSSProperties,
     })),
@@ -688,7 +688,7 @@ function derive(
         zIndex: s.hoverId === p.id ? 5 : 1,
       } as CSSProperties,
       nameStyle: {
-        background: s.hoverId === p.id ? "#2E7D32" : "#fff",
+        background: s.hoverId === p.id ? "#8A6A14" : "#fff",
         color: s.hoverId === p.id ? "#fff" : "#212121",
         borderRadius: "999px",
         padding: "6px 13px",
@@ -810,9 +810,9 @@ function derive(
       label,
       pick: () => {},
       style: {
-        border: i === 0 ? "1px solid #2E7D32" : "1px solid #E8E8E8",
-        background: i === 0 ? "#EAF2EA" : "#fff",
-        color: i === 0 ? "#2E7D32" : "#616161",
+        border: i === 0 ? "1px solid #8A6A14" : "1px solid #E8E8E8",
+        background: i === 0 ? "#F7EFD5" : "#fff",
+        color: i === 0 ? "#8A6A14" : "#616161",
         borderRadius: "999px",
         padding: "8px 15px",
         fontSize: "13px",
@@ -843,8 +843,8 @@ function derive(
         fontSize: "14px",
         fontWeight: s.dash === label ? 600 : 500,
         cursor: "pointer",
-        background: s.dash === label ? "#EAF2EA" : "transparent",
-        color: s.dash === label ? "#2E7D32" : "#616161",
+        background: s.dash === label ? "#F7EFD5" : "transparent",
+        color: s.dash === label ? "#8A6A14" : "#616161",
       } as CSSProperties,
     })),
     dashTitle: s.dash,
@@ -903,7 +903,7 @@ function derive(
           m.who === "me" ? "16px 16px 4px 16px" : "16px 16px 16px 4px",
         fontSize: "14px",
         lineHeight: 1.55,
-        background: m.who === "me" ? "#2E7D32" : "#F1F3EE",
+        background: m.who === "me" ? "#8A6A14" : "#F6F2E8",
         color: m.who === "me" ? "#fff" : "#212121",
       } as CSSProperties,
     })),
@@ -1154,8 +1154,8 @@ function derive(
         borderRadius: "16px",
         cursor: "pointer",
         background: "#fff",
-        border: s.extras[key] ? "1px solid #2E7D32" : "1px solid #E8E8E8",
-        boxShadow: s.extras[key] ? "0 0 0 3px rgba(46,125,50,.10)" : "none",
+        border: s.extras[key] ? "1px solid #8A6A14" : "1px solid #E8E8E8",
+        boxShadow: s.extras[key] ? "0 0 0 3px rgba(138,106,20,.10)" : "none",
         transition: "all .18s ease",
       } as CSSProperties,
       box: {
@@ -1166,9 +1166,9 @@ function derive(
         alignItems: "center",
         justifyContent: "center",
         fontSize: "12px",
-        background: s.extras[key] ? "#2E7D32" : "#fff",
+        background: s.extras[key] ? "#8A6A14" : "#fff",
         color: s.extras[key] ? "#fff" : "transparent",
-        border: s.extras[key] ? "1px solid #2E7D32" : "1px solid #D5D5D0",
+        border: s.extras[key] ? "1px solid #8A6A14" : "1px solid #D5D5D0",
       } as CSSProperties,
     })),
     chosenServices: svcDefs
@@ -1192,14 +1192,14 @@ function derive(
         borderRadius: "14px",
         cursor: "pointer",
         background: "#fff",
-        border: s.pay === key ? "1px solid #2E7D32" : "1px solid #E8E8E8",
-        boxShadow: s.pay === key ? "0 0 0 3px rgba(46,125,50,.10)" : "none",
+        border: s.pay === key ? "1px solid #8A6A14" : "1px solid #E8E8E8",
+        boxShadow: s.pay === key ? "0 0 0 3px rgba(138,106,20,.10)" : "none",
       } as CSSProperties,
       dot: {
         width: "16px",
         height: "16px",
         borderRadius: "999px",
-        border: s.pay === key ? "5px solid #2E7D32" : "2px solid #CFCFCF",
+        border: s.pay === key ? "5px solid #8A6A14" : "2px solid #CFCFCF",
       } as CSSProperties,
     })),
     arrival: [

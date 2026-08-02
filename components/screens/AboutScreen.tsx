@@ -24,7 +24,7 @@ export default function AboutScreen() {
           />
           <div
             style={s(
-              "position:absolute;inset:0;background:linear-gradient(120deg,rgba(16,26,18,.72) 20%,rgba(16,26,18,.25) 100%);"
+              "position:absolute;inset:0;background:linear-gradient(120deg,rgba(28,23,10,.72) 20%,rgba(28,23,10,.25) 100%);"
             )}
           />
           <div className="hero-text"
@@ -111,7 +111,7 @@ export default function AboutScreen() {
             >
               <div
                 style={s(
-                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#2E7D32;"
+                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#8A6A14;"
                 )}
               >
                 {p.kicker}
@@ -147,7 +147,7 @@ export default function AboutScreen() {
                 "background:#fff;border:1px solid #E8E8E8;border-radius:18px;padding:22px;"
               )}
             >
-              <div className="serif" style={s("font-size:22px;color:#2E7D32;")}>
+              <div className="serif" style={s("font-size:22px;color:#8A6A14;")}>
                 {st.n}
               </div>
               <div style={s("font-size:14.5px;font-weight:600;margin-top:10px;")}>

@@ -35,7 +35,7 @@ export default function ContactScreen() {
             >
               <div
                 style={s(
-                  "width:40px;height:40px;border-radius:12px;background:#EAF2EA;color:#2E7D32;display:flex;align-items:center;justify-content:center;font-size:15px;"
+                  "width:40px;height:40px;border-radius:12px;background:#F7EFD5;color:#8A6A14;display:flex;align-items:center;justify-content:center;font-size:15px;"
                 )}
               >
                 {c.glyph}
@@ -52,17 +52,17 @@ export default function ContactScreen() {
 
         <div
           style={s(
-            "margin-top:24px;border-radius:20px;overflow:hidden;height:240px;position:relative;border:1px solid #E8E8E8;background:repeating-linear-gradient(45deg,#EDF1EA,#EDF1EA 14px,#E6ECE3 14px,#E6ECE3 28px);"
+            "margin-top:24px;border-radius:20px;overflow:hidden;height:240px;position:relative;border:1px solid #E8E8E8;background:repeating-linear-gradient(45deg,#F5F0E2,#F5F0E2 14px,#EFE7D2 14px,#EFE7D2 28px);"
           )}
         >
           <div
             style={s(
-              "position:absolute;left:48%;top:46%;width:18px;height:18px;border-radius:999px;background:#2E7D32;border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.25);"
+              "position:absolute;left:48%;top:46%;width:18px;height:18px;border-radius:999px;background:#8A6A14;border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.25);"
             )}
           />
           <div
             style={s(
-              "position:absolute;right:14px;bottom:12px;font-family:monospace;font-size:11px;color:#8AA08C;"
+              "position:absolute;right:14px;bottom:12px;font-family:monospace;font-size:11px;color:#A8945F;"
             )}
           >
             head office · Kiyovu, Kigali
@@ -134,9 +134,9 @@ export default function ContactScreen() {
         </div>
 
         <div
-          className="hv-green"
+          className="hv-primary"
           style={s(
-            "margin-top:20px;background:#2E7D32;color:#fff;border-radius:14px;padding:15px;text-align:center;font-size:15px;font-weight:600;cursor:pointer;"
+            "margin-top:20px;background:#8A6A14;color:#fff;border-radius:14px;padding:15px;text-align:center;font-size:15px;font-weight:600;cursor:pointer;"
           )}
         >
           Send message

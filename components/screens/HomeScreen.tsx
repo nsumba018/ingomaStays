@@ -26,7 +26,7 @@ export default function HomeScreen() {
           />
           <div
             style={s(
-              "position:absolute;inset:0;background:linear-gradient(160deg,rgba(16,26,18,.5) 0%,rgba(16,26,18,.2) 45%,rgba(16,26,18,.66) 100%);"
+              "position:absolute;inset:0;background:linear-gradient(160deg,rgba(28,23,10,.5) 0%,rgba(28,23,10,.2) 45%,rgba(28,23,10,.66) 100%);"
             )}
           />
           <div
@@ -156,10 +156,10 @@ export default function HomeScreen() {
             </div>
           </div>
           <div
-            className="hv-green search-cta"
+            className="hv-primary search-cta"
             onClick={v.goHomes}
             style={s(
-              "background:#2E7D32;color:#fff;border-radius:14px;padding:16px 32px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:9px;transition:background .2s ease;"
+              "background:#8A6A14;color:#fff;border-radius:14px;padding:16px 32px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:9px;transition:background .2s ease;"
             )}
           >
             <svg width="15" height="15" viewBox="0 0 18 18">
@@ -191,7 +191,7 @@ export default function HomeScreen() {
                 "display:flex;align-items:center;gap:8px;font-size:13px;color:#616161;"
               )}
             >
-              <span style={s("color:#2E7D32;font-weight:700;")}>✓</span>
+              <span style={s("color:#8A6A14;font-weight:700;")}>✓</span>
               {p.label}
             </div>
           ))}
@@ -215,7 +215,7 @@ export default function HomeScreen() {
           <div
             onClick={v.goHomes}
             style={s(
-              "font-size:14px;font-weight:600;color:#2E7D32;cursor:pointer;"
+              "font-size:14px;font-weight:600;color:#8A6A14;cursor:pointer;"
             )}
           >
             View both apartments →
@@ -255,7 +255,7 @@ export default function HomeScreen() {
                 </div>
                 <div
                   style={s(
-                    "position:absolute;top:14px;left:14px;background:rgba(255,255,255,.95);border-radius:999px;padding:5px 12px;font-size:11px;font-weight:600;color:#2E7D32;"
+                    "position:absolute;top:14px;left:14px;background:rgba(255,255,255,.95);border-radius:999px;padding:5px 12px;font-size:11px;font-weight:600;color:#8A6A14;"
                   )}
                 >
                   Professionally managed
@@ -285,7 +285,7 @@ export default function HomeScreen() {
                 </div>
                 <div
                   style={s(
-                    "font-size:13px;font-weight:600;color:#2E7D32;margin-top:6px;"
+                    "font-size:13px;font-weight:600;color:#8A6A14;margin-top:6px;"
                   )}
                 >
                   {p.tierLabel}
@@ -314,10 +314,10 @@ export default function HomeScreen() {
                     <span style={s("color:#616161;font-size:13.5px;")}>/ night</span>
                   </div>
                   <div
-                    className="hv-green"
+                    className="hv-primary"
                     onClick={p.book}
                     style={s(
-                      "background:#2E7D32;color:#fff;border-radius:12px;padding:10px 20px;font-size:13.5px;font-weight:600;cursor:pointer;transition:background .2s ease;"
+                      "background:#8A6A14;color:#fff;border-radius:12px;padding:10px 20px;font-size:13.5px;font-weight:600;cursor:pointer;transition:background .2s ease;"
                     )}
                   >
                     Book now
@@ -385,7 +385,7 @@ export default function HomeScreen() {
       </div>
 
       {/* ---- alita & artha feature ----------------------------------------- */}
-      <div style={s("margin-top:80px;background:#15211A;color:#fff;")}>
+      <div style={s("margin-top:80px;background:#211C0E;color:#fff;")}>
         <div
           className="sec split-2"
           style={s(
@@ -398,7 +398,7 @@ export default function HomeScreen() {
                 "font-size:11px;letter-spacing:.24em;font-weight:600;color:#D9B24A;"
               )}
             >
-              KEZA &amp; LIZA
+              ALITA &amp; ARTHA
             </div>
             <div
               className="serif"
@@ -502,7 +502,7 @@ export default function HomeScreen() {
                 </div>
                 <div
                   style={s(
-                    "font-size:13px;font-weight:600;color:#2E7D32;margin-top:12px;"
+                    "font-size:13px;font-weight:600;color:#8A6A14;margin-top:12px;"
                   )}
                 >
                   {m.count} homes →
@@ -560,7 +560,7 @@ export default function HomeScreen() {
                 <div key={t.title}>
                   <div
                     style={s(
-                      "width:40px;height:40px;border-radius:12px;background:#EAF2EA;color:#2E7D32;display:flex;align-items:center;justify-content:center;font-size:16px;"
+                      "width:40px;height:40px;border-radius:12px;background:#F7EFD5;color:#8A6A14;display:flex;align-items:center;justify-content:center;font-size:16px;"
                     )}
                   >
                     {t.glyph}
@@ -614,15 +614,15 @@ export default function HomeScreen() {
             >
               <div
                 style={s(
-                  "background:#2E7D32;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
+                  "background:#8A6A14;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
                 )}
               >
                 Alita Apartments
               </div>
-              <div style={s("width:2px;height:10px;background:#2E7D32;")} />
+              <div style={s("width:2px;height:10px;background:#8A6A14;")} />
               <div
                 style={s(
-                  "width:10px;height:10px;border-radius:999px;background:#2E7D32;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);"
+                  "width:10px;height:10px;border-radius:999px;background:#8A6A14;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);"
                 )}
               />
             </div>
@@ -633,15 +633,15 @@ export default function HomeScreen() {
             >
               <div
                 style={s(
-                  "background:#1976D2;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
+                  "background:#634C0D;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
                 )}
               >
                 Artha Apartments
               </div>
-              <div style={s("width:2px;height:10px;background:#1976D2;")} />
+              <div style={s("width:2px;height:10px;background:#634C0D;")} />
               <div
                 style={s(
-                  "width:10px;height:10px;border-radius:999px;background:#1976D2;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);"
+                  "width:10px;height:10px;border-radius:999px;background:#634C0D;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);"
                 )}
               />
             </div>
@@ -655,7 +655,7 @@ export default function HomeScreen() {
               <div style={s("display:flex;align-items:center;gap:10px;")}>
                 <div
                   style={s(
-                    "width:30px;height:30px;border-radius:999px;background:#2E7D32;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;"
+                    "width:30px;height:30px;border-radius:999px;background:#8A6A14;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;"
                   )}
                 >
                   K
@@ -688,10 +688,10 @@ export default function HomeScreen() {
               <div style={s("display:flex;align-items:center;gap:10px;")}>
                 <div
                   style={s(
-                    "width:30px;height:30px;border-radius:999px;background:#1976D2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;"
+                    "width:30px;height:30px;border-radius:999px;background:#634C0D;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;"
                   )}
                 >
-                  L
+                  N
                 </div>
                 <div className="serif" style={s("font-size:16px;")}>
                   Artha Apartments
@@ -791,7 +791,7 @@ export default function HomeScreen() {
             <div
               onClick={v.goContact}
               style={s(
-                "margin-top:18px;font-size:14px;font-weight:600;color:#2E7D32;cursor:pointer;"
+                "margin-top:18px;font-size:14px;font-weight:600;color:#8A6A14;cursor:pointer;"
               )}
             >
               Contact us →
@@ -878,9 +878,9 @@ export default function HomeScreen() {
               )}
             />
             <div
-              className="hv-green"
+              className="hv-primary"
               style={s(
-                "background:#2E7D32;color:#fff;border-radius:12px;padding:13px 26px;font-size:14.5px;font-weight:600;cursor:pointer;white-space:nowrap;"
+                "background:#8A6A14;color:#fff;border-radius:12px;padding:13px 26px;font-size:14.5px;font-weight:600;cursor:pointer;white-space:nowrap;"
               )}
             >
               Subscribe

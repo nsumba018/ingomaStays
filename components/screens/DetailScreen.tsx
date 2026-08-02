@@ -30,7 +30,7 @@ export default function DetailScreen() {
         <div>
           <div
             style={s(
-              "font-size:11px;letter-spacing:.2em;font-weight:600;color:#2E7D32;"
+              "font-size:11px;letter-spacing:.2em;font-weight:600;color:#8A6A14;"
             )}
           >
             {v.sel.collection}, KIGALI · MANAGED BY INGOMA HOMES
@@ -123,7 +123,7 @@ export default function DetailScreen() {
                   "display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #E8E8E8;border-radius:14px;padding:12px 16px;font-size:13.5px;font-weight:500;"
                 )}
               >
-                <span style={s("color:#2E7D32;")}>✓</span>
+                <span style={s("color:#8A6A14;")}>✓</span>
                 {sv.label}
               </div>
             ))}
@@ -139,7 +139,7 @@ export default function DetailScreen() {
               <div className="serif" style={s("font-size:20px;font-weight:600;")}>
                 Choose your unit
               </div>
-              <div style={s("font-size:13.5px;font-weight:600;color:#2E7D32;")}>
+              <div style={s("font-size:13.5px;font-weight:600;color:#8A6A14;")}>
                 {v.availSummary}
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function DetailScreen() {
                 >
                   <div style={s("font-size:15.5px;font-weight:600;")}>{g.label}</div>
                   <div
-                    style={s("font-size:13.5px;font-weight:700;color:#2E7D32;")}
+                    style={s("font-size:13.5px;font-weight:700;color:#8A6A14;")}
                   >
                     {g.priceLabel}
                   </div>
@@ -254,7 +254,7 @@ export default function DetailScreen() {
                     "display:flex;align-items:center;gap:10px;font-size:14.5px;color:#424242;"
                   )}
                 >
-                  <span style={s("color:#2E7D32;")}>✓</span> {a.label}
+                  <span style={s("color:#8A6A14;")}>✓</span> {a.label}
                 </div>
               ))}
             </div>
@@ -396,17 +396,17 @@ export default function DetailScreen() {
             </div>
             <div
               style={s(
-                "margin-top:18px;position:relative;height:320px;border-radius:20px;overflow:hidden;border:1px solid #E8E8E8;background:repeating-linear-gradient(45deg,#EDF1EA,#EDF1EA 14px,#E6ECE3 14px,#E6ECE3 28px);"
+                "margin-top:18px;position:relative;height:320px;border-radius:20px;overflow:hidden;border:1px solid #E8E8E8;background:repeating-linear-gradient(45deg,#F5F0E2,#F5F0E2 14px,#EFE7D2 14px,#EFE7D2 28px);"
               )}
             >
               <div
                 style={s(
-                  "position:absolute;left:48%;top:44%;width:18px;height:18px;border-radius:999px;background:#2E7D32;border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.28);"
+                  "position:absolute;left:48%;top:44%;width:18px;height:18px;border-radius:999px;background:#8A6A14;border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.28);"
                 )}
               />
               <div
                 style={s(
-                  "position:absolute;right:16px;bottom:14px;font-family:monospace;font-size:11px;color:#8AA08C;"
+                  "position:absolute;right:16px;bottom:14px;font-family:monospace;font-size:11px;color:#A8945F;"
                 )}
               >
                 map · {v.sel.location}
@@ -447,7 +447,7 @@ export default function DetailScreen() {
             </div>
             <div
               style={s(
-                "margin-top:8px;display:inline-flex;align-items:center;gap:8px;background:#EAF2EA;color:#2E7D32;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;"
+                "margin-top:8px;display:inline-flex;align-items:center;gap:8px;background:#F7EFD5;color:#8A6A14;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;"
               )}
             >
               Unit {v.unitN} · {v.unitType}
@@ -531,10 +531,10 @@ export default function DetailScreen() {
             </div>
 
             <div
-              className="hv-green"
+              className="hv-primary"
               onClick={v.openBooking}
               style={s(
-                "margin-top:18px;background:#2E7D32;color:#fff;border-radius:14px;padding:16px;text-align:center;font-size:16px;font-weight:600;cursor:pointer;transition:background .2s ease;"
+                "margin-top:18px;background:#8A6A14;color:#fff;border-radius:14px;padding:16px;text-align:center;font-size:16px;font-weight:600;cursor:pointer;transition:background .2s ease;"
               )}
             >
               Book now

@@ -19,13 +19,13 @@ export default function Footer() {
             <div
               className="serif"
               style={s(
-                "width:32px;height:32px;border-radius:10px;background:#2E7D32;color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;"
+                "width:32px;height:32px;border-radius:10px;background:#8A6A14;color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;"
               )}
             >
               I
             </div>
             <div className="serif" style={s("font-size:18px;")}>
-              Ingoma <span style={s("color:#2E7D32;")}>Homes</span>
+              Ingoma <span style={s("color:#8A6A14;")}>Homes</span>
             </div>
           </div>
           <div
