@@ -56,7 +56,7 @@ export default function HomeScreen() {
                 "font-size:17px;line-height:1.65;color:rgba(255,255,255,.9);margin-top:20px;max-width:560px;"
               )}
             >
-              Keza Apartments in Kicukiro and Liza Apartments in Nyarugenge —
+              Alita Apartments in Kicukiro and Artha Apartments in Nyarugenge —
               both owned and professionally managed by our hospitality company.
             </div>
             <div className="hero-stats" style={s("display:flex;gap:26px;margin-top:28px;")}>
@@ -384,7 +384,7 @@ export default function HomeScreen() {
         </div>
       </div>
 
-      {/* ---- keza & liza feature ------------------------------------------- */}
+      {/* ---- alita & artha feature ----------------------------------------- */}
       <div style={s("margin-top:80px;background:#15211A;color:#fff;")}>
         <div
           className="sec split-2"
@@ -617,7 +617,7 @@ export default function HomeScreen() {
                   "background:#2E7D32;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
                 )}
               >
-                K · Keza Apartments
+                Alita Apartments
               </div>
               <div style={s("width:2px;height:10px;background:#2E7D32;")} />
               <div
@@ -636,7 +636,7 @@ export default function HomeScreen() {
                   "background:#1976D2;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
                 )}
               >
-                L · Liza Apartments
+                Artha Apartments
               </div>
               <div style={s("width:2px;height:10px;background:#1976D2;")} />
               <div
@@ -661,7 +661,7 @@ export default function HomeScreen() {
                   K
                 </div>
                 <div className="serif" style={s("font-size:16px;")}>
-                  Keza Apartments
+                  Alita Apartments
                 </div>
               </div>
               <div
@@ -694,7 +694,7 @@ export default function HomeScreen() {
                   L
                 </div>
                 <div className="serif" style={s("font-size:16px;")}>
-                  Liza Apartments
+                  Artha Apartments
                 </div>
               </div>
               <div

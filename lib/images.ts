@@ -154,7 +154,7 @@ export function img(seed: string, tags: string): string {
 }
 
 /**
- * Inline hatched placeholder, used for the Liza interiors that have not been
+ * Inline hatched placeholder, used for the Artha interiors that have not been
  * professionally photographed yet.
  */
 export function ph(label: string, w: number, h: number): string {

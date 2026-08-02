@@ -17,7 +17,7 @@ export default function AboutScreen() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/keza/k01.jpg"
-            alt="Keza Apartments saloon"
+            alt="Alita Apartments saloon"
             style={s(
               "position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"
             )}
@@ -76,8 +76,8 @@ export default function AboutScreen() {
               "font-size:16px;line-height:1.8;color:#424242;margin-top:16px;text-wrap:pretty;"
             )}
           >
-            Today we own and operate two apartments in Kigali — Keza Apartments
-            in Kicukiro and Liza Apartments in Nyarugenge. Both are designed
+            Today we own and operate two apartments in Kigali — Alita Apartments
+            in Kicukiro and Artha Apartments in Nyarugenge. Both are designed
             in-house, inspected weekly, and staffed by people on our payroll —
             which is why the coffee, the linen and the welcome are the same at
             both doors.

@@ -11,7 +11,8 @@ export type Screen =
   | "dashboard"
   | "detail";
 
-export type UnitType = "1 bedroom" | "2 bedrooms" | "3 bedrooms";
+/** "Studio" is a bed and a private bathroom, with no separate living room. */
+export type UnitType = "Studio" | "1 bedroom" | "2 bedrooms" | "3 bedrooms";
 
 /** A single apartment within a building. `booked` holds [checkIn, checkOut) day-index ranges. */
 export interface Unit {
@@ -45,7 +46,7 @@ export interface BedroomTier {
   img: string;
 }
 
-/** One of the two apartment buildings. */
+/** One of the two apartment buildings Ingoma Homes owns: Alita and Artha. */
 export interface Building {
   id: number;
   title: string;

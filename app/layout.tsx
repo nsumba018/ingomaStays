@@ -19,7 +19,7 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "Ingoma Homes — Serviced apartments in Kigali, Rwanda",
   description:
-    "Keza Apartments in Kicukiro and Liza Apartments in Nyarugenge — owned and professionally managed by Ingoma Homes.",
+    "Alita Apartments in Kicukiro and Artha Apartments in Nyarugenge — owned and professionally managed by Ingoma Homes.",
 };
 
 export default function RootLayout({

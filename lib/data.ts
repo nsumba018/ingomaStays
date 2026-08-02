@@ -1,14 +1,17 @@
 import { ph } from "./images";
 import type { Building, Unit, UnitType } from "./types";
 
-/** Keza photo set: `k00` is the exterior stock shot, k01–k19 are the real interiors. */
-const kezaPhoto = (n: number) =>
+/**
+ * Alita photo set: `k00` is the exterior stock shot, k01–k19 are the real
+ * interiors. The `/assets/keza` folder name predates the rename to Alita.
+ */
+const alitaPhoto = (n: number) =>
   n === 0
     ? "/assets/u1600585154340_be6161a56a0c.jpg"
     : "/assets/keza/k" + String(n).padStart(2, "0") + ".jpg";
 
-/** Ordered gallery for Keza: [photo index, caption]. */
-const KEZA_SHOTS: [number, string][] = [
+/** Ordered gallery for Alita: [photo index, caption]. */
+const ALITA_SHOTS: [number, string][] = [
   [0, "The building"],
   [1, "Saloon"],
   [2, "Saloon — fireplace wall"],
@@ -31,7 +34,7 @@ const KEZA_SHOTS: [number, string][] = [
   [19, "Entrance"],
 ];
 
-const LIZA_ROOMS = [
+const ARTHA_ROOMS = [
   "Living room",
   "Main bedroom",
   "Second bedroom",
@@ -42,38 +45,38 @@ const LIZA_ROOMS = [
   "Entrance",
 ];
 
+/** How many units of one type a building holds, and what they cost per night. */
+interface UnitMix {
+  type: UnitType;
+  count: number;
+  price: number;
+  sleeps: number;
+}
+
 /**
- * Builds the 19-unit stack for a building.
+ * Builds a building's unit stack from its mix, numbering units 1..n in the
+ * order the mix is listed (smallest type first).
  *
- * Units 1–8 are one-bedroom, 9–15 two-bedroom, 16–19 three-bedroom. Units named
- * in `occupied` carry a long mid-month booking; the rest get a deterministic
- * pattern so availability visibly changes as the guest moves their dates.
+ * Units named in `occupied` carry a long mid-month booking; the rest get a
+ * deterministic pattern so availability visibly changes as the guest moves
+ * their dates.
  */
-function buildUnits(
-  occupied: number[],
-  oneBed: number,
-  twoBed: number,
-  threeBed: number
-): Unit[] {
-  return Array.from({ length: 19 }, (_, i) => {
-    const n = i + 1;
-    const type: UnitType =
-      n <= 8 ? "1 bedroom" : n <= 15 ? "2 bedrooms" : "3 bedrooms";
-    const booked: [number, number][] = occupied.includes(n)
-      ? [[1, 7]]
-      : n % 3 === 0
-        ? [[0, 3]]
-        : n % 4 === 0
-          ? [[7, 10]]
-          : [];
-    return {
-      n,
-      type,
-      price: n <= 8 ? oneBed : n <= 15 ? twoBed : threeBed,
-      sleeps: n <= 8 ? 2 : n <= 15 ? 4 : 6,
-      booked,
-    };
-  });
+function buildUnits(mix: UnitMix[], occupied: number[]): Unit[] {
+  const units: Unit[] = [];
+  for (const { type, count, price, sleeps } of mix) {
+    for (let i = 0; i < count; i++) {
+      const n = units.length + 1;
+      const booked: [number, number][] = occupied.includes(n)
+        ? [[1, 7]]
+        : n % 3 === 0
+          ? [[0, 3]]
+          : n % 4 === 0
+            ? [[7, 10]]
+            : [];
+      units.push({ n, type, price, sleeps, booked });
+    }
+  }
+  return units;
 }
 
 /** The two buildings Ingoma Homes owns and operates. */
@@ -81,43 +84,57 @@ export function buildings(): Building[] {
   const defs = [
     {
       id: 1,
-      title: "Keza Apartments",
+      title: "Alita Apartments",
       location: "Kicukiro",
       collection: "KICUKIRO",
       rating: "4.95",
       reviews: 86,
-      sleeps: 4,
-      beds: 2,
+      sleeps: 6,
+      beds: 3,
       baths: 2,
+      specs: "10 units · studio to 3-bedroom",
       cat: [
         "Kicukiro",
         "Romantic escapes",
         "Weekend getaways",
         "Business travel",
       ],
-      units: buildUnits([2, 3, 6, 9, 11, 14, 17], 50, 70, 95),
+      units: buildUnits(
+        [
+          { type: "Studio", count: 2, price: 40, sleeps: 2 },
+          { type: "1 bedroom", count: 2, price: 50, sleeps: 2 },
+          { type: "2 bedrooms", count: 4, price: 70, sleeps: 4 },
+          { type: "3 bedrooms", count: 2, price: 95, sleeps: 6 },
+        ],
+        [2, 6, 9]
+      ),
       am: "Fireplace lounge · Ambient LED ceilings · Full kitchen",
       mx: 60,
       my: 61,
       dist: "10 min to Kigali CBD, 15 min to the airport",
-      desc: "A two-bedroom apartment in Kicukiro finished in black, gold and soft pink — an electric-fireplace lounge under ambient LED ceilings, a fully equipped kitchen with oven and full-size fridge, and two ensuite shower rooms in matte black tile. Ten minutes to the CBD, fifteen to the airport, with parking inside the compound and daily housekeeping by our team.",
+      desc: "Ten apartments in Kicukiro finished in black, gold and soft pink — electric-fireplace lounges under ambient LED ceilings, fully equipped kitchens with oven and full-size fridge, and ensuite shower rooms in matte black tile. The stack runs from studios up to three-bedroom homes, so a solo traveller and a family of six book the same building. Ten minutes to the CBD, fifteen to the airport, with parking inside the compound and daily housekeeping by our team.",
       img: "/assets/u1600585154340_be6161a56a0c.jpg",
-      gallery: KEZA_SHOTS.map(([n, alt]) => ({ src: kezaPhoto(n), alt })),
+      gallery: ALITA_SHOTS.map(([n, alt]) => ({ src: alitaPhoto(n), alt })),
       bedrooms: [
         {
+          name: "Studio units",
+          bed: "Units 1–2 · sleeps 2",
+          img: alitaPhoto(5),
+        },
+        {
           name: "1-bedroom units",
-          bed: "Units 1–8 · sleeps 2",
-          img: kezaPhoto(3),
+          bed: "Units 3–4 · sleeps 2",
+          img: alitaPhoto(3),
         },
         {
           name: "2-bedroom units",
-          bed: "Units 9–15 · sleeps 4",
-          img: kezaPhoto(7),
+          bed: "Units 5–8 · sleeps 4",
+          img: alitaPhoto(7),
         },
         {
           name: "3-bedroom units",
-          bed: "Units 16–19 · sleeps 6",
-          img: kezaPhoto(1),
+          bed: "Units 9–10 · sleeps 6",
+          img: alitaPhoto(1),
         },
       ],
       revs: [
@@ -137,49 +154,43 @@ export function buildings(): Building[] {
     },
     {
       id: 2,
-      title: "Liza Apartments",
+      title: "Artha Apartments",
       location: "Nyarugenge",
       collection: "NYARUGENGE",
       rating: "4.90",
       reviews: 74,
-      sleeps: 3,
+      sleeps: 4,
       beds: 2,
       baths: 1,
+      specs: "2 units · both 2-bedroom",
       cat: [
         "Nyarugenge",
         "Family-friendly",
         "Weekend getaways",
         "Business travel",
       ],
-      units: buildUnits([1, 4, 5, 8, 13, 16, 18, 19], 45, 60, 85),
+      units: buildUnits(
+        [{ type: "2 bedrooms", count: 2, price: 60, sleeps: 4 }],
+        [1]
+      ),
       am: "City-centre location · Full kitchen · Fast Wi-Fi",
       mx: 36,
       my: 36,
       dist: "In the city centre, Nyarugenge",
-      desc: "Our second apartment sits in Nyarugenge, the heart of Kigali — markets, restaurants and the CBD within walking distance. Two bedrooms, a full kitchen and the same Ingoma standard of housekeeping, linen and 24/7 support you’ll find at Keza. Professional interior photos are being shot now.",
+      desc: "Our second building sits in Nyarugenge, the heart of Kigali — markets, restaurants and the CBD within walking distance. Two apartments, and both are the same layout: two bedrooms, a living room and a full kitchen, with the same Ingoma standard of housekeeping, linen and 24/7 support you’ll find at Alita. Professional interior photos are being shot now.",
       img: "/assets/u1512917774080_9991f1c4c750.jpg",
       gallery: [
         { src: "/assets/u1512917774080_9991f1c4c750.jpg", alt: "The building" },
-        ...LIZA_ROOMS.map((alt) => ({
-          src: ph("Liza · " + alt + " · photo coming soon", 1000, 760),
+        ...ARTHA_ROOMS.map((alt) => ({
+          src: ph("Artha · " + alt + " · photo coming soon", 1000, 760),
           alt,
         })),
       ],
       bedrooms: [
         {
-          name: "1-bedroom units",
-          bed: "Units 1–8 · sleeps 2",
-          img: ph("Liza · 1-bedroom unit", 700, 520),
-        },
-        {
           name: "2-bedroom units",
-          bed: "Units 9–15 · sleeps 4",
-          img: ph("Liza · 2-bedroom unit", 700, 520),
-        },
-        {
-          name: "3-bedroom units",
-          bed: "Units 16–19 · sleeps 6",
-          img: ph("Liza · 3-bedroom unit", 700, 520),
+          bed: "Units 1–2 · sleeps 4",
+          img: ph("Artha · 2-bedroom unit", 700, 520),
         },
       ],
       revs: [
@@ -203,7 +214,6 @@ export function buildings(): Building[] {
   return defs.map((p) => ({
     ...p,
     price: Math.min(...p.units.map((u) => u.price)),
-    specs: "19 units · 1, 2 & 3-bedroom options",
   }));
 }
 

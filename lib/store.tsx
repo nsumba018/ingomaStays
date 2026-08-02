@@ -24,6 +24,7 @@ import type {
   ResolvedUnit,
   Screen,
   State,
+  UnitType,
 } from "./types";
 
 const INITIAL: State = {
@@ -93,6 +94,45 @@ export function IngomaProvider({
 
 type Patch = (next: Partial<State> | ((prev: State) => Partial<State>)) => void;
 
+/** Unit types smallest-first, so every tier list on the site reads in one order. */
+const TIER_ORDER: UnitType[] = [
+  "Studio",
+  "1 bedroom",
+  "2 bedrooms",
+  "3 bedrooms",
+];
+
+const TIER_SHORT: Record<UnitType, string> = {
+  Studio: "Studio",
+  "1 bedroom": "1 BR",
+  "2 bedrooms": "2 BR",
+  "3 bedrooms": "3 BR",
+};
+
+const TIER_LABEL: Record<UnitType, string> = {
+  Studio: "Studio units",
+  "1 bedroom": "1-bedroom units",
+  "2 bedrooms": "2-bedroom units",
+  "3 bedrooms": "3-bedroom units",
+};
+
+/** Groups a building's units by type, smallest first, skipping types it lacks. */
+function tiersOf<T extends { type: UnitType }>(units: T[]): [UnitType, T[]][] {
+  return TIER_ORDER.map(
+    (type) => [type, units.filter((u) => u.type === type)] as [UnitType, T[]]
+  ).filter(([, us]) => us.length > 0);
+}
+
+/** "studio, 1, 2 & 3 bedrooms" — the mix a building offers, as a chip. */
+function mixLabel(units: { type: UnitType }[]): string {
+  const types = tiersOf(units).map(([type]) => type);
+  if (types.length === 1)
+    return types[0] === "Studio" ? "studios" : "all " + types[0];
+  const parts = types.map((t) => (t === "Studio" ? "studio" : parseInt(t, 10)));
+  const last = parts.pop();
+  return parts.join(", ") + " & " + last + " bedrooms";
+}
+
 function derive(
   s: State,
   patch: Patch,
@@ -128,18 +168,15 @@ function derive(
     ...p,
     priceLabel: "from " + fmt(p.price),
     chips: [
-      "19 units",
-      "1, 2 & 3 bedrooms",
+      p.units.length + (p.units.length === 1 ? " unit" : " units"),
+      mixLabel(p.units),
       p.availCount + " available for your dates",
     ].map((label) => ({ label })),
+    // One "<type> <price>" per unit type the building actually has.
     tierLabel:
-      "1 BR " +
-      fmt(p.units[0].price) +
-      " · 2 BR " +
-      fmt(p.units[8].price) +
-      " · 3 BR " +
-      fmt(p.units[15].price) +
-      " / night",
+      tiersOf(p.units)
+        .map(([type, us]) => TIER_SHORT[type] + " " + fmt(us[0].price))
+        .join(" · ") + " / night",
     open: () => {
       patch({ screen: "detail", selId: p.id, gallery: false });
       scrollTop();
@@ -255,16 +292,11 @@ function derive(
     };
   });
 
-  const unitGroups = (
-    [
-      ["1 bedroom", "1-bedroom units"],
-      ["2 bedrooms", "2-bedroom units"],
-      ["3 bedrooms", "3-bedroom units"],
-    ] as const
-  ).map(([type, label]) => {
-    const us = selUnits.filter((u) => u.type === type);
-    return { label, priceLabel: us[0].priceLabel + " / night", units: us };
-  });
+  const unitGroups = tiersOf(selUnits).map(([type, us]) => ({
+    label: TIER_LABEL[type],
+    priceLabel: us[0].priceLabel + " / night",
+    units: us,
+  }));
 
   // ---- pricing ------------------------------------------------------------
   const nights = Math.max(1, s.co - s.ci);
@@ -353,15 +385,15 @@ function derive(
   const destDefs: [string, string, string, string, string][] = [
     [
       "Kicukiro",
-      "Home of Keza Apartments — a calm residential district ten minutes south-east of the centre, with easy airport access.",
-      "Keza Apartments",
+      "Home of Alita Apartments — a calm residential district ten minutes south-east of the centre, with easy airport access.",
+      "Alita Apartments",
       "Residential calm",
       "15 min to airport",
     ],
     [
       "Nyarugenge",
-      "Home of Liza Apartments — the beating heart of Kigali, with the CBD, markets and nightlife at the door.",
-      "Liza Apartments",
+      "Home of Artha Apartments — the beating heart of Kigali, with the CBD, markets and nightlife at the door.",
+      "Artha Apartments",
       "City centre",
       "Markets & dining",
     ],
@@ -460,8 +492,11 @@ function derive(
 
     // ---- home screen ------------------------------------------------------
     heroStats: [
-      { value: "2", label: "apartment buildings" },
-      { value: "38", label: "units across Kigali" },
+      { value: String(resolved.length), label: "apartment buildings" },
+      {
+        value: String(resolved.reduce((n, p) => n + p.units.length, 0)),
+        label: "units across Kigali",
+      },
       { value: "4.93★", label: "guest rating" },
     ],
     promises: [
@@ -510,10 +545,10 @@ function derive(
     })),
 
     standardsImgs: [
-      { src: "/assets/keza/k03.jpg", alt: "Main bedroom at Keza" },
-      { src: "/assets/keza/k08.jpg", alt: "Kitchen at Keza" },
-      { src: "/assets/keza/k14.jpg", alt: "Bathroom at Keza" },
-      { src: "/assets/keza/k18.jpg", alt: "Balcony at Keza" },
+      { src: "/assets/keza/k03.jpg", alt: "Main bedroom at Alita" },
+      { src: "/assets/keza/k08.jpg", alt: "Kitchen at Alita" },
+      { src: "/assets/keza/k14.jpg", alt: "Bathroom at Alita" },
+      { src: "/assets/keza/k18.jpg", alt: "Balcony at Alita" },
     ],
     trust: [
       {
@@ -551,7 +586,7 @@ function derive(
       {
         name: "Amélie R.",
         place: "Paris",
-        home: "Keza Apartments",
+        home: "Alita Apartments",
         img: img("t-amelie", "portrait,woman"),
         quote:
           "Booking direct with the company made the whole thing simple — one contact, one invoice, and the home was exactly as photographed.",
@@ -559,7 +594,7 @@ function derive(
       {
         name: "Kwame O.",
         place: "Accra",
-        home: "Keza Apartments",
+        home: "Alita Apartments",
         img: img("t-kwame", "portrait,man"),
         quote:
           "I have used them three times for work. Same wifi speed, same coffee, same spotless kitchen every single visit.",
@@ -567,7 +602,7 @@ function derive(
       {
         name: "Sandrine M.",
         place: "Kigali",
-        home: "Liza Apartments",
+        home: "Artha Apartments",
         img: img("t-sandrine", "portrait,face"),
         quote:
           "Paying in francs with mobile money and getting a real receipt from a real company — that is why I keep booking with Ingoma.",
@@ -577,7 +612,7 @@ function derive(
       [
         [
           "Do you own both apartments?",
-          "Yes. Keza Apartments (Kicukiro) and Liza Apartments (Nyarugenge) are owned and operated by Ingoma Homes. There are no third-party hosts — you book directly with us.",
+          "Yes. Alita Apartments (Kicukiro) and Artha Apartments (Nyarugenge) are owned and operated by Ingoma Homes. There are no third-party hosts — you book directly with us.",
         ],
         [
           "How is cleaning handled?",
@@ -624,7 +659,7 @@ function derive(
     priceCap: s.priceCap,
     priceOptions: [
       { value: 0, label: "Any price" },
-      ...[45, 50, 60, 70, 85, 95].map((v) => ({
+      ...[40, 50, 60, 70, 95].map((v) => ({
         value: v,
         label: "Up to " + fmt(v) + " / night",
       })),
@@ -636,13 +671,10 @@ function derive(
       open: p.open,
       hover: p.hover,
       unhover: p.unhover,
-      prices: (
-        [
-          [p.units[0].price, "1 BR"],
-          [p.units[8].price, "2 BR"],
-          [p.units[15].price, "3 BR"],
-        ] as [number, string][]
-      ).map(([v, br]) => ({ label: fmt(v), br })),
+      prices: tiersOf(p.units).map(([type, us]) => ({
+        label: fmt(us[0].price),
+        br: TIER_SHORT[type],
+      })),
       wrapStyle: {
         position: "absolute",
         left: p.mx + "%",
@@ -729,10 +761,10 @@ function derive(
 
     // ---- about screen -----------------------------------------------------
     aboutImgs: [
-      { src: "/assets/keza/k02.jpg", alt: "Living room, Keza" },
-      { src: "/assets/keza/k06.jpg", alt: "Main bedroom, Keza" },
-      { src: "/assets/keza/k09.jpg", alt: "Kitchen, Keza" },
-      { src: "/assets/keza/k11.jpg", alt: "Lounge wall, Keza" },
+      { src: "/assets/keza/k02.jpg", alt: "Living room, Alita" },
+      { src: "/assets/keza/k06.jpg", alt: "Main bedroom, Alita" },
+      { src: "/assets/keza/k09.jpg", alt: "Kitchen, Alita" },
+      { src: "/assets/keza/k11.jpg", alt: "Lounge wall, Alita" },
     ],
     pillars: [
       {
@@ -827,19 +859,19 @@ function derive(
     })),
     payments: [
       {
-        home: "Keza Apartments",
+        home: "Alita Apartments",
         dates: "12–15 Mar 2026",
         method: "Visa •••• 4218",
         amount: fmt(232),
       },
       {
-        home: "Liza Apartments",
+        home: "Artha Apartments",
         dates: "20–23 Dec 2025",
         method: "MTN Mobile Money",
         amount: fmt(199),
       },
       {
-        home: "Keza Apartments",
+        home: "Alita Apartments",
         dates: "8–10 Aug 2025",
         method: "Visa •••• 4218",
         amount: fmt(155),
@@ -849,7 +881,7 @@ function derive(
       [
         {
           who: "them",
-          text: "Karibu! Your door code for Keza Apartments is 4-9-2-1. It activates at 14:00 on the 4th.",
+          text: "Karibu! Your door code for Alita Apartments is 4-9-2-1. It activates at 14:00 on the 4th.",
         },
         { who: "me", text: "Perfect. Could we add airport pickup for two people?" },
         {
@@ -880,12 +912,22 @@ function derive(
     sel,
     selPriceLabel: fmt(unitPrice),
     unitGroups,
+    unitIntro:
+      sel.title +
+      " has " +
+      units.length +
+      (units.length === 1 ? " unit" : " units") +
+      " (" +
+      mixLabel(units) +
+      ").",
     unitN: selectedUnit.n,
     unitType: selectedUnit.type,
     maxGuests: selectedUnit.sleeps,
     availSummary:
       units.filter((u) => !u.occupied).length +
-      " of 19 units free · Aug " +
+      " of " +
+      units.length +
+      " units free · Aug " +
       DAYS[s.ci] +
       "–" +
       DAYS[s.co],
@@ -1211,8 +1253,8 @@ function derive(
         {
           title: "Our homes",
           items: [
-            ["Keza Apartments", "homes"],
-            ["Liza Apartments", "homes"],
+            ["Alita Apartments", "homes"],
+            ["Artha Apartments", "homes"],
             ["All apartments", "homes"],
             ["Business travel", "homes"],
           ],

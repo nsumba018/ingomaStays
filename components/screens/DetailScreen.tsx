@@ -144,8 +144,8 @@ export default function DetailScreen() {
               </div>
             </div>
             <div style={s("font-size:13.5px;color:#616161;margin-top:6px;")}>
-              Each building has 19 units. Availability follows your dates — change
-              them in the booking card and the grid updates.
+              {v.unitIntro} Availability follows your dates — change them in the
+              booking card and the grid updates.
             </div>
             {v.unitGroups.map((g) => (
               <div key={g.label} style={s("margin-top:20px;")}>
