@@ -1,5 +1,6 @@
 "use client";
 
+import BuildingLogo from "@/components/BuildingLogo";
 import { s } from "@/lib/css";
 import { useIngoma } from "@/lib/store";
 
@@ -112,7 +113,7 @@ export default function HomesScreen() {
                   </div>
                   <div
                     style={s(
-                      "position:absolute;bottom:12px;left:12px;background:rgba(255,255,255,.95);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:600;color:#8A6A14;"
+                      "position:absolute;bottom:12px;left:12px;background:rgba(255,255,255,.95);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:600;color:#98771E;"
                     )}
                   >
                     Instant confirmation
@@ -122,8 +123,11 @@ export default function HomesScreen() {
                   <div style={s("display:flex;justify-content:space-between;gap:10px;")}>
                     <div
                       onClick={p.open}
-                      style={s("font-size:16.5px;font-weight:600;cursor:pointer;")}
+                      style={s(
+                        "display:flex;align-items:center;gap:9px;font-size:16.5px;font-weight:600;cursor:pointer;"
+                      )}
                     >
+                      <BuildingLogo title={p.title} logo={p.logo} size={29} />
                       {p.title}
                     </div>
                     <div
@@ -143,7 +147,7 @@ export default function HomesScreen() {
                   </div>
                   <div
                     style={s(
-                      "font-size:13px;font-weight:600;color:#8A6A14;margin-top:6px;"
+                      "font-size:13px;font-weight:600;color:#98771E;margin-top:6px;"
                     )}
                   >
                     {p.tierLabel}
@@ -161,7 +165,7 @@ export default function HomesScreen() {
                       className="hv-primary"
                       onClick={p.book}
                       style={s(
-                        "background:#8A6A14;color:#fff;border-radius:12px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;"
+                        "background:#98771E;color:#fff;border-radius:12px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;"
                       )}
                     >
                       Book now

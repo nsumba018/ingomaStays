@@ -17,9 +17,9 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Ingoma Homes — Serviced apartments in Kigali, Rwanda",
+  title: "A & A Apartments — Serviced apartments in Kigali, Rwanda",
   description:
-    "Alita Apartments in Kicukiro and Artha Apartments in Nyarugenge — owned and professionally managed by Ingoma Homes.",
+    "Alita Apartments in Kicukiro and Artha Apartments in Nyarugenge — owned and professionally managed by A & A Apartments.",
 };
 
 export default function RootLayout({

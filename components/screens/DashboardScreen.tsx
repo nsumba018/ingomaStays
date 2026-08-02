@@ -49,7 +49,7 @@ export default function DashboardScreen() {
                   <div style={s("display:flex;gap:8px;")}>
                     <div
                       style={s(
-                        "background:#F7EFD5;color:#8A6A14;border-radius:999px;padding:5px 12px;font-size:11.5px;font-weight:600;"
+                        "background:#F7EFD5;color:#98771E;border-radius:999px;padding:5px 12px;font-size:11.5px;font-weight:600;"
                       )}
                     >
                       Confirmed
@@ -80,7 +80,7 @@ export default function DashboardScreen() {
                       className="hv-primary"
                       onClick={v.openArrival}
                       style={s(
-                        "background:#8A6A14;color:#fff;border-radius:12px;padding:11px 20px;font-size:13.5px;font-weight:600;cursor:pointer;"
+                        "background:#98771E;color:#fff;border-radius:12px;padding:11px 20px;font-size:13.5px;font-weight:600;cursor:pointer;"
                       )}
                     >
                       Arrival instructions
@@ -122,7 +122,7 @@ export default function DashboardScreen() {
                 <div
                   onClick={v.goHomes}
                   style={s(
-                    "display:inline-block;margin-top:22px;background:#8A6A14;color:#fff;border-radius:999px;padding:13px 28px;font-size:14.5px;font-weight:600;cursor:pointer;"
+                    "display:inline-block;margin-top:22px;background:#98771E;color:#fff;border-radius:999px;padding:13px 28px;font-size:14.5px;font-weight:600;cursor:pointer;"
                   )}
                 >
                   Browse our homes
@@ -212,7 +212,7 @@ export default function DashboardScreen() {
                 <div style={s("color:#616161;")}>{r.dates}</div>
                 <div style={s("color:#616161;")}>{r.method}</div>
                 <div style={s("font-weight:600;")}>{r.amount}</div>
-                <div style={s("color:#8A6A14;font-weight:600;cursor:pointer;")}>
+                <div style={s("color:#98771E;font-weight:600;cursor:pointer;")}>
                   PDF
                 </div>
               </div>
@@ -233,16 +233,16 @@ export default function DashboardScreen() {
             >
               <div
                 style={s(
-                  "width:38px;height:38px;border-radius:999px;background:#8A6A14;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;"
+                  "width:38px;height:38px;border-radius:999px;background:#98771E;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;"
                 )}
               >
                 IH
               </div>
               <div>
                 <div style={s("font-size:14.5px;font-weight:600;")}>
-                  Ingoma Guest Support
+                  A & A Guest Support
                 </div>
-                <div style={s("font-size:12px;color:#8A6A14;")}>
+                <div style={s("font-size:12px;color:#98771E;")}>
                   ● Online · replies in ~18 min
                 </div>
               </div>
@@ -270,7 +270,7 @@ export default function DashboardScreen() {
               <div
                 className="hv-primary"
                 style={s(
-                  "background:#8A6A14;color:#fff;border-radius:12px;padding:12px 24px;font-size:14px;font-weight:600;cursor:pointer;"
+                  "background:#98771E;color:#fff;border-radius:12px;padding:12px 24px;font-size:14px;font-weight:600;cursor:pointer;"
                 )}
               >
                 Send

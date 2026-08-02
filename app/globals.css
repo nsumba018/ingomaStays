@@ -26,11 +26,11 @@ body {
 }
 
 a {
-  color: #8A6A14;
+  color: #98771E;
   text-decoration: none;
 }
 a:hover {
-  color: #634C0D;
+  color: #6E5510;
 }
 
 input,
@@ -96,7 +96,7 @@ textarea::placeholder {
   background: #F6F2E8;
 }
 .hv-primary:hover {
-  background: #634C0D !important;
+  background: #6E5510 !important;
 }
 .hv-gold:hover {
   background: rgba(217, 178, 74, 0.12);

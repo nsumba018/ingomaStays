@@ -1,5 +1,6 @@
 "use client";
 
+import Logo from "./Logo";
 import { s } from "@/lib/css";
 import { useIngoma } from "@/lib/store";
 
@@ -15,19 +16,7 @@ export default function Footer() {
         )}
       >
         <div className="footer-brand">
-          <div style={s("display:flex;align-items:center;gap:11px;")}>
-            <div
-              className="serif"
-              style={s(
-                "width:32px;height:32px;border-radius:10px;background:#8A6A14;color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;"
-              )}
-            >
-              I
-            </div>
-            <div className="serif" style={s("font-size:18px;")}>
-              Ingoma <span style={s("color:#8A6A14;")}>Homes</span>
-            </div>
-          </div>
+          <Logo size={38} wordSize={21} kicker="APARTMENTS · KIGALI" />
           <div
             style={s(
               "font-size:13.5px;color:#616161;margin-top:14px;line-height:1.65;max-width:290px;"
@@ -86,7 +75,7 @@ export default function Footer() {
             "padding-top:22px;display:flex;justify-content:space-between;font-size:12.5px;color:#616161;"
           )}
         >
-          <div>© 2026 Ingoma Homes Ltd · Kiyovu, Kigali · TIN 108••••••</div>
+          <div>© 2026 A & A Apartments Ltd · Kiyovu, Kigali · TIN 108••••••</div>
           <div style={s("display:flex;gap:24px;")}>
             <span>Privacy</span>
             <span>Terms</span>

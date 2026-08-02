@@ -47,7 +47,7 @@ export default function DestinationsScreen() {
             <div className="dest-body" style={s("padding:44px 48px;" + d.textStyle)}>
               <div
                 style={s(
-                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#8A6A14;"
+                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#98771E;"
                 )}
               >
                 KIGALI · {d.name}
@@ -84,7 +84,7 @@ export default function DestinationsScreen() {
                   className="hv-primary"
                   onClick={d.go}
                   style={s(
-                    "background:#8A6A14;color:#fff;border-radius:12px;padding:12px 24px;font-size:14px;font-weight:600;cursor:pointer;"
+                    "background:#98771E;color:#fff;border-radius:12px;padding:12px 24px;font-size:14px;font-weight:600;cursor:pointer;"
                   )}
                 >
                   View apartment

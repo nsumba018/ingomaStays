@@ -79,7 +79,7 @@ function buildUnits(mix: UnitMix[], occupied: number[]): Unit[] {
   return units;
 }
 
-/** The two buildings Ingoma Homes owns and operates. */
+/** The two buildings A & A Apartments owns and operates. */
 export function buildings(): Building[] {
   const defs = [
     {
@@ -114,6 +114,7 @@ export function buildings(): Building[] {
       dist: "10 min to Kigali CBD, 15 min to the airport",
       desc: "Ten apartments in Kicukiro finished in black, gold and soft pink — electric-fireplace lounges under ambient LED ceilings, fully equipped kitchens with oven and full-size fridge, and ensuite shower rooms in matte black tile. The stack runs from studios up to three-bedroom homes, so a solo traveller and a family of six book the same building. Ten minutes to the CBD, fifteen to the airport, with parking inside the compound and daily housekeeping by our team.",
       img: "/assets/u1600585154340_be6161a56a0c.jpg",
+      logo: "/assets/brand/alita-mark.png",
       gallery: ALITA_SHOTS.map(([n, alt]) => ({ src: alitaPhoto(n), alt })),
       bedrooms: [
         {
@@ -177,7 +178,7 @@ export function buildings(): Building[] {
       mx: 36,
       my: 36,
       dist: "In the city centre, Nyarugenge",
-      desc: "Our second building sits in Nyarugenge, the heart of Kigali — markets, restaurants and the CBD within walking distance. Two apartments, and both are the same layout: two bedrooms, a living room and a full kitchen, with the same Ingoma standard of housekeeping, linen and 24/7 support you’ll find at Alita. Professional interior photos are being shot now.",
+      desc: "Our second building sits in Nyarugenge, the heart of Kigali — markets, restaurants and the CBD within walking distance. Two apartments, and both are the same layout: two bedrooms, a living room and a full kitchen, with the same A & A standard of housekeeping, linen and 24/7 support you’ll find at Alita. Professional interior photos are being shot now.",
       img: "/assets/u1512917774080_9991f1c4c750.jpg",
       gallery: [
         { src: "/assets/u1512917774080_9991f1c4c750.jpg", alt: "The building" },

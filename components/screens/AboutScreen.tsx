@@ -37,7 +37,7 @@ export default function AboutScreen() {
                 "font-size:11px;letter-spacing:.24em;font-weight:600;color:rgba(255,255,255,.8);"
               )}
             >
-              ABOUT INGOMA HOMES
+              ABOUT A &amp; A APARTMENTS
             </div>
             <div
               className="serif hero-title"
@@ -65,7 +65,7 @@ export default function AboutScreen() {
               "font-size:16px;line-height:1.8;color:#424242;margin-top:16px;text-wrap:pretty;"
             )}
           >
-            Ingoma Homes began in 2019 with a single restored house in Kiyovu and
+            A & A Apartments began in 2019 with a single restored house in Kiyovu and
             one conviction: travellers to Rwanda deserved better than the lottery
             of unmanaged rentals. We bought the home, furnished it ourselves,
             hired a full-time housekeeping team and never listed anyone
@@ -111,7 +111,7 @@ export default function AboutScreen() {
             >
               <div
                 style={s(
-                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#8A6A14;"
+                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#98771E;"
                 )}
               >
                 {p.kicker}
@@ -147,7 +147,7 @@ export default function AboutScreen() {
                 "background:#fff;border:1px solid #E8E8E8;border-radius:18px;padding:22px;"
               )}
             >
-              <div className="serif" style={s("font-size:22px;color:#8A6A14;")}>
+              <div className="serif" style={s("font-size:22px;color:#98771E;")}>
                 {st.n}
               </div>
               <div style={s("font-size:14.5px;font-weight:600;margin-top:10px;")}>

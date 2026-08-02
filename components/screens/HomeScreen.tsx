@@ -1,5 +1,6 @@
 "use client";
 
+import BuildingLogo from "@/components/BuildingLogo";
 import { s } from "@/lib/css";
 import { useIngoma } from "@/lib/store";
 
@@ -40,7 +41,7 @@ export default function HomeScreen() {
                 "font-size:11px;letter-spacing:.24em;font-weight:600;color:rgba(255,255,255,.82);"
               )}
             >
-              OWNED &amp; PROFESSIONALLY MANAGED BY INGOMA HOMES
+              ALITA &amp; ARTHA · KICUKIRO &amp; NYARUGENGE, KIGALI
             </div>
             <div
               className="serif hero-title"
@@ -159,7 +160,7 @@ export default function HomeScreen() {
             className="hv-primary search-cta"
             onClick={v.goHomes}
             style={s(
-              "background:#8A6A14;color:#fff;border-radius:14px;padding:16px 32px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:9px;transition:background .2s ease;"
+              "background:#98771E;color:#fff;border-radius:14px;padding:16px 32px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:9px;transition:background .2s ease;"
             )}
           >
             <svg width="15" height="15" viewBox="0 0 18 18">
@@ -191,7 +192,7 @@ export default function HomeScreen() {
                 "display:flex;align-items:center;gap:8px;font-size:13px;color:#616161;"
               )}
             >
-              <span style={s("color:#8A6A14;font-weight:700;")}>✓</span>
+              <span style={s("color:#98771E;font-weight:700;")}>✓</span>
               {p.label}
             </div>
           ))}
@@ -215,7 +216,7 @@ export default function HomeScreen() {
           <div
             onClick={v.goHomes}
             style={s(
-              "font-size:14px;font-weight:600;color:#8A6A14;cursor:pointer;"
+              "font-size:14px;font-weight:600;color:#98771E;cursor:pointer;"
             )}
           >
             View both apartments →
@@ -255,7 +256,7 @@ export default function HomeScreen() {
                 </div>
                 <div
                   style={s(
-                    "position:absolute;top:14px;left:14px;background:rgba(255,255,255,.95);border-radius:999px;padding:5px 12px;font-size:11px;font-weight:600;color:#8A6A14;"
+                    "position:absolute;top:14px;left:14px;background:rgba(255,255,255,.95);border-radius:999px;padding:5px 12px;font-size:11px;font-weight:600;color:#98771E;"
                   )}
                 >
                   Professionally managed
@@ -266,9 +267,10 @@ export default function HomeScreen() {
                   <div
                     onClick={p.open}
                     style={s(
-                      "font-size:17px;font-weight:600;line-height:1.3;cursor:pointer;"
+                      "display:flex;align-items:center;gap:9px;font-size:17px;font-weight:600;line-height:1.3;cursor:pointer;"
                     )}
                   >
+                    <BuildingLogo title={p.title} logo={p.logo} size={30} />
                     {p.title}
                   </div>
                   <div
@@ -285,7 +287,7 @@ export default function HomeScreen() {
                 </div>
                 <div
                   style={s(
-                    "font-size:13px;font-weight:600;color:#8A6A14;margin-top:6px;"
+                    "font-size:13px;font-weight:600;color:#98771E;margin-top:6px;"
                   )}
                 >
                   {p.tierLabel}
@@ -317,7 +319,7 @@ export default function HomeScreen() {
                     className="hv-primary"
                     onClick={p.book}
                     style={s(
-                      "background:#8A6A14;color:#fff;border-radius:12px;padding:10px 20px;font-size:13.5px;font-weight:600;cursor:pointer;transition:background .2s ease;"
+                      "background:#98771E;color:#fff;border-radius:12px;padding:10px 20px;font-size:13.5px;font-weight:600;cursor:pointer;transition:background .2s ease;"
                     )}
                   >
                     Book now
@@ -502,7 +504,7 @@ export default function HomeScreen() {
                 </div>
                 <div
                   style={s(
-                    "font-size:13px;font-weight:600;color:#8A6A14;margin-top:12px;"
+                    "font-size:13px;font-weight:600;color:#98771E;margin-top:12px;"
                   )}
                 >
                   {m.count} homes →
@@ -560,7 +562,7 @@ export default function HomeScreen() {
                 <div key={t.title}>
                   <div
                     style={s(
-                      "width:40px;height:40px;border-radius:12px;background:#F7EFD5;color:#8A6A14;display:flex;align-items:center;justify-content:center;font-size:16px;"
+                      "width:40px;height:40px;border-radius:12px;background:#F7EFD5;color:#98771E;display:flex;align-items:center;justify-content:center;font-size:16px;"
                     )}
                   >
                     {t.glyph}
@@ -614,15 +616,15 @@ export default function HomeScreen() {
             >
               <div
                 style={s(
-                  "background:#8A6A14;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
+                  "background:#98771E;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
                 )}
               >
                 Alita Apartments
               </div>
-              <div style={s("width:2px;height:10px;background:#8A6A14;")} />
+              <div style={s("width:2px;height:10px;background:#98771E;")} />
               <div
                 style={s(
-                  "width:10px;height:10px;border-radius:999px;background:#8A6A14;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);"
+                  "width:10px;height:10px;border-radius:999px;background:#98771E;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);"
                 )}
               />
             </div>
@@ -633,15 +635,15 @@ export default function HomeScreen() {
             >
               <div
                 style={s(
-                  "background:#634C0D;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
+                  "background:#6E5510;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;"
                 )}
               >
                 Artha Apartments
               </div>
-              <div style={s("width:2px;height:10px;background:#634C0D;")} />
+              <div style={s("width:2px;height:10px;background:#6E5510;")} />
               <div
                 style={s(
-                  "width:10px;height:10px;border-radius:999px;background:#634C0D;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);"
+                  "width:10px;height:10px;border-radius:999px;background:#6E5510;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);"
                 )}
               />
             </div>
@@ -655,7 +657,7 @@ export default function HomeScreen() {
               <div style={s("display:flex;align-items:center;gap:10px;")}>
                 <div
                   style={s(
-                    "width:30px;height:30px;border-radius:999px;background:#8A6A14;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;"
+                    "width:30px;height:30px;border-radius:999px;background:#98771E;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;"
                   )}
                 >
                   K
@@ -688,7 +690,7 @@ export default function HomeScreen() {
               <div style={s("display:flex;align-items:center;gap:10px;")}>
                 <div
                   style={s(
-                    "width:30px;height:30px;border-radius:999px;background:#634C0D;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;"
+                    "width:30px;height:30px;border-radius:999px;background:#6E5510;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;"
                   )}
                 >
                   N
@@ -791,7 +793,7 @@ export default function HomeScreen() {
             <div
               onClick={v.goContact}
               style={s(
-                "margin-top:18px;font-size:14px;font-weight:600;color:#8A6A14;cursor:pointer;"
+                "margin-top:18px;font-size:14px;font-weight:600;color:#98771E;cursor:pointer;"
               )}
             >
               Contact us →
@@ -880,7 +882,7 @@ export default function HomeScreen() {
             <div
               className="hv-primary"
               style={s(
-                "background:#8A6A14;color:#fff;border-radius:12px;padding:13px 26px;font-size:14.5px;font-weight:600;cursor:pointer;white-space:nowrap;"
+                "background:#98771E;color:#fff;border-radius:12px;padding:13px 26px;font-size:14.5px;font-weight:600;cursor:pointer;white-space:nowrap;"
               )}
             >
               Subscribe

@@ -77,7 +77,7 @@ export default function BookingModal() {
                         </div>
                         <div
                           style={s(
-                            "font-size:13px;font-weight:700;color:#8A6A14;"
+                            "font-size:13px;font-weight:700;color:#98771E;"
                           )}
                         >
                           {g.priceLabel}
@@ -262,7 +262,7 @@ export default function BookingModal() {
                   <div
                     style={s("margin-top:24px;font-size:15.5px;font-weight:600;")}
                   >
-                    Pay Ingoma Homes directly
+                    Pay A & A Apartments directly
                   </div>
                   <div
                     style={s(
@@ -347,7 +347,7 @@ export default function BookingModal() {
                   >
                     By confirming you agree to our House Rules, Cancellation Policy
                     and Terms. Free cancellation until {v.ciLabel}. Your payment
-                    goes directly to Ingoma Homes — never to a third-party host.
+                    goes directly to A & A Apartments — never to a third-party host.
                   </div>
                 </>
               )}
@@ -370,7 +370,7 @@ export default function BookingModal() {
                   className="hv-primary"
                   onClick={v.nextStep}
                   style={s(
-                    "background:#8A6A14;color:#fff;border-radius:14px;padding:14px 30px;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s ease;"
+                    "background:#98771E;color:#fff;border-radius:14px;padding:14px 30px;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s ease;"
                   )}
                 >
                   {v.nextLabel}
@@ -498,7 +498,7 @@ export default function BookingModal() {
             <div style={s("text-align:center;")}>
               <div
                 style={s(
-                  "width:74px;height:74px;border-radius:999px;background:#F7EFD5;color:#8A6A14;font-size:32px;display:flex;align-items:center;justify-content:center;margin:0 auto;animation:pop .5s ease;"
+                  "width:74px;height:74px;border-radius:999px;background:#F7EFD5;color:#98771E;font-size:32px;display:flex;align-items:center;justify-content:center;margin:0 auto;animation:pop .5s ease;"
                 )}
               >
                 ✓
@@ -527,7 +527,7 @@ export default function BookingModal() {
             >
               <div
                 style={s(
-                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#8A6A14;"
+                  "font-size:11px;letter-spacing:.2em;font-weight:600;color:#98771E;"
                 )}
               >
                 ARRIVAL INSTRUCTIONS
@@ -561,7 +561,7 @@ export default function BookingModal() {
                 className="hv-primary"
                 onClick={v.viewBooking}
                 style={s(
-                  "background:#8A6A14;color:#fff;border-radius:14px;padding:14px 30px;font-size:15px;font-weight:600;cursor:pointer;"
+                  "background:#98771E;color:#fff;border-radius:14px;padding:14px 30px;font-size:15px;font-weight:600;cursor:pointer;"
                 )}
               >
                 View my booking

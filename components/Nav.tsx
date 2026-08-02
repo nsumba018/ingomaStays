@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Logo from "./Logo";
 import { s } from "@/lib/css";
 import { useIngoma } from "@/lib/store";
 
@@ -48,36 +49,8 @@ export default function Nav() {
           "max-width:1180px;margin:0 auto;padding:12px 28px;min-height:78px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;"
         )}
       >
-        <div
-          onClick={v.goHome}
-          style={s(
-            "cursor:pointer;display:flex;align-items:center;gap:11px;flex:0 0 auto;"
-          )}
-        >
-          <div
-            className="serif"
-            style={s(
-              "width:34px;height:34px;border-radius:10px;background:#8A6A14;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;"
-            )}
-          >
-            I
-          </div>
-          <div>
-            <div
-              className="serif"
-              style={s("font-size:19px;letter-spacing:-0.02em;line-height:1.1;")}
-            >
-              Ingoma <span style={s("color:#8A6A14;")}>Homes</span>
-            </div>
-            <div
-              className="nav-kicker"
-              style={s(
-                "font-size:9.5px;letter-spacing:.16em;color:#616161;font-weight:600;"
-              )}
-            >
-              RWANDA · EST. 2019
-            </div>
-          </div>
+        <div onClick={v.goHome} style={s("cursor:pointer;flex:0 0 auto;")}>
+          <Logo />
         </div>
 
         <div
@@ -124,7 +97,7 @@ export default function Nav() {
           <div
             onClick={v.goDashboard}
             style={s(
-              "width:34px;height:34px;border-radius:999px;background:#F7EFD5;color:#8A6A14;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;cursor:pointer;border:1px solid #F0E6C9;"
+              "width:34px;height:34px;border-radius:999px;background:#F7EFD5;color:#98771E;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;cursor:pointer;border:1px solid #F0E6C9;"
             )}
           >
             A
@@ -133,7 +106,7 @@ export default function Nav() {
             className="hv-primary nav-cta"
             onClick={v.goHomes}
             style={s(
-              "background:#8A6A14;color:#fff;border-radius:999px;padding:11px 22px;font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s ease;"
+              "background:#98771E;color:#fff;border-radius:999px;padding:11px 22px;font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s ease;"
             )}
           >
             Book now

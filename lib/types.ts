@@ -46,7 +46,7 @@ export interface BedroomTier {
   img: string;
 }
 
-/** One of the two apartment buildings Ingoma Homes owns: Alita and Artha. */
+/** One of the two apartment buildings A & A Apartments owns: Alita and Artha. */
 export interface Building {
   id: number;
   title: string;
@@ -66,6 +66,9 @@ export interface Building {
   dist: string;
   desc: string;
   img: string;
+  /** The building's own logo mark. Omit until the real artwork arrives — the
+   *  A & A family mark stands in. */
+  logo?: string;
   gallery: GalleryShot[];
   bedrooms: BedroomTier[];
   revs: Review[];

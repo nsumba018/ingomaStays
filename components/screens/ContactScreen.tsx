@@ -35,7 +35,7 @@ export default function ContactScreen() {
             >
               <div
                 style={s(
-                  "width:40px;height:40px;border-radius:12px;background:#F7EFD5;color:#8A6A14;display:flex;align-items:center;justify-content:center;font-size:15px;"
+                  "width:40px;height:40px;border-radius:12px;background:#F7EFD5;color:#98771E;display:flex;align-items:center;justify-content:center;font-size:15px;"
                 )}
               >
                 {c.glyph}
@@ -57,7 +57,7 @@ export default function ContactScreen() {
         >
           <div
             style={s(
-              "position:absolute;left:48%;top:46%;width:18px;height:18px;border-radius:999px;background:#8A6A14;border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.25);"
+              "position:absolute;left:48%;top:46%;width:18px;height:18px;border-radius:999px;background:#98771E;border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.25);"
             )}
           />
           <div
@@ -136,7 +136,7 @@ export default function ContactScreen() {
         <div
           className="hv-primary"
           style={s(
-            "margin-top:20px;background:#8A6A14;color:#fff;border-radius:14px;padding:15px;text-align:center;font-size:15px;font-weight:600;cursor:pointer;"
+            "margin-top:20px;background:#98771E;color:#fff;border-radius:14px;padding:15px;text-align:center;font-size:15px;font-weight:600;cursor:pointer;"
           )}
         >
           Send message

@@ -1,5 +1,6 @@
 "use client";
 
+import BuildingLogo from "@/components/BuildingLogo";
 import { s } from "@/lib/css";
 import { useIngoma } from "@/lib/store";
 
@@ -30,17 +31,18 @@ export default function DetailScreen() {
         <div>
           <div
             style={s(
-              "font-size:11px;letter-spacing:.2em;font-weight:600;color:#8A6A14;"
+              "font-size:11px;letter-spacing:.2em;font-weight:600;color:#98771E;"
             )}
           >
-            {v.sel.collection}, KIGALI · MANAGED BY INGOMA HOMES
+            {v.sel.collection}, KIGALI · MANAGED BY A &amp; A APARTMENTS
           </div>
           <div
             className="serif detail-title"
             style={s(
-              "font-size:38px;letter-spacing:-0.03em;line-height:1.12;margin-top:10px;"
+              "display:flex;align-items:center;gap:14px;font-size:38px;letter-spacing:-0.03em;line-height:1.12;margin-top:10px;"
             )}
           >
+            <BuildingLogo title={v.sel.title} logo={v.sel.logo} size={44} />
             {v.sel.title}
           </div>
           <div
@@ -123,7 +125,7 @@ export default function DetailScreen() {
                   "display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #E8E8E8;border-radius:14px;padding:12px 16px;font-size:13.5px;font-weight:500;"
                 )}
               >
-                <span style={s("color:#8A6A14;")}>✓</span>
+                <span style={s("color:#98771E;")}>✓</span>
                 {sv.label}
               </div>
             ))}
@@ -139,7 +141,7 @@ export default function DetailScreen() {
               <div className="serif" style={s("font-size:20px;font-weight:600;")}>
                 Choose your unit
               </div>
-              <div style={s("font-size:13.5px;font-weight:600;color:#8A6A14;")}>
+              <div style={s("font-size:13.5px;font-weight:600;color:#98771E;")}>
                 {v.availSummary}
               </div>
             </div>
@@ -156,7 +158,7 @@ export default function DetailScreen() {
                 >
                   <div style={s("font-size:15.5px;font-weight:600;")}>{g.label}</div>
                   <div
-                    style={s("font-size:13.5px;font-weight:700;color:#8A6A14;")}
+                    style={s("font-size:13.5px;font-weight:700;color:#98771E;")}
                   >
                     {g.priceLabel}
                   </div>
@@ -254,7 +256,7 @@ export default function DetailScreen() {
                     "display:flex;align-items:center;gap:10px;font-size:14.5px;color:#424242;"
                   )}
                 >
-                  <span style={s("color:#8A6A14;")}>✓</span> {a.label}
+                  <span style={s("color:#98771E;")}>✓</span> {a.label}
                 </div>
               ))}
             </div>
@@ -401,7 +403,7 @@ export default function DetailScreen() {
             >
               <div
                 style={s(
-                  "position:absolute;left:48%;top:44%;width:18px;height:18px;border-radius:999px;background:#8A6A14;border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.28);"
+                  "position:absolute;left:48%;top:44%;width:18px;height:18px;border-radius:999px;background:#98771E;border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.28);"
                 )}
               />
               <div
@@ -447,7 +449,7 @@ export default function DetailScreen() {
             </div>
             <div
               style={s(
-                "margin-top:8px;display:inline-flex;align-items:center;gap:8px;background:#F7EFD5;color:#8A6A14;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;"
+                "margin-top:8px;display:inline-flex;align-items:center;gap:8px;background:#F7EFD5;color:#98771E;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;"
               )}
             >
               Unit {v.unitN} · {v.unitType}
@@ -534,7 +536,7 @@ export default function DetailScreen() {
               className="hv-primary"
               onClick={v.openBooking}
               style={s(
-                "margin-top:18px;background:#8A6A14;color:#fff;border-radius:14px;padding:16px;text-align:center;font-size:16px;font-weight:600;cursor:pointer;transition:background .2s ease;"
+                "margin-top:18px;background:#98771E;color:#fff;border-radius:14px;padding:16px;text-align:center;font-size:16px;font-weight:600;cursor:pointer;transition:background .2s ease;"
               )}
             >
               Book now
@@ -591,7 +593,7 @@ export default function DetailScreen() {
               "margin-top:14px;font-size:12.5px;color:#616161;text-align:center;line-height:1.6;"
             )}
           >
-            🔒 Secure payment direct to Ingoma Homes · No third-party host
+            🔒 Secure payment direct to A & A Apartments · No third-party host
           </div>
         </div>
       </div>
