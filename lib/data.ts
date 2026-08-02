@@ -219,6 +219,9 @@ export const NAV_LINKS: [string, string][] = [
   ["Contact", "contact"],
 ];
 
+/** Experiences screen is built but hidden for now; flip to true to bring it back. */
+export const SHOW_EXPERIENCES = false;
+
 export const DASH_SECTIONS = [
   "Upcoming bookings",
   "Past stays",

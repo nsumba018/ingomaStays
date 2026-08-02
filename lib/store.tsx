@@ -14,6 +14,7 @@ import {
   CATEGORY_NAMES,
   DASH_SECTIONS,
   DAYS,
+  SHOW_EXPERIENCES,
   STEP_NAMES,
 } from "./data";
 import { img } from "./images";
@@ -404,7 +405,7 @@ function derive(
     onHome: s.screen === "home",
     onHomes: s.screen === "homes",
     onDestinations: s.screen === "destinations",
-    onExperiences: s.screen === "experiences",
+    onExperiences: SHOW_EXPERIENCES && s.screen === "experiences",
     onAbout: s.screen === "about",
     onContact: s.screen === "contact",
     onSaved: s.screen === "saved",
@@ -416,7 +417,7 @@ function derive(
         ["Home", "home"],
         ["Our Homes", "homes"],
         ["Destinations", "destinations"],
-        ["Experiences", "experiences"],
+        ...(SHOW_EXPERIENCES ? [["Experiences", "experiences"]] : []),
         ["About Us", "about"],
         ["Contact", "contact"],
       ] as [string, Screen][]
